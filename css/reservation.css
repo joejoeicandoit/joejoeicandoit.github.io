@@ -1,0 +1,42 @@
+/*
+breadcrumpは「パンクズ」のことですが、これは童話ヘンゼルとグレーテルの話の中で、パンを千切って道票にしたことから、
+ページ内の進捗やページの場所を表すものを「パンクズリスト」と呼び、
+breadcrumpというクラス（名前）をつけることがあります
+*/
+
+.breadcrump {
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+}
+
+.breadcrump ul {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrump li {
+    position: relative; /*この後出てくるpositioon: absoluteのための設定です*/
+    margin-right: 13px;
+    background-color: rgb(69, 178, 189);
+    color: white;
+    width: 100px;
+}
+
+.breadcrump li:after {
+    content: ""; /*after, before 類似クラスをつけるときの定型文*/
+    position: absolute;
+    top: 0;
+    left: 100px;
+    border-style: solid;
+    border-width: 12px 0px 12px 11.6px;
+    border-color: transparent transparent transparent rgb(69, 178, 189);
+}
+
+.breadcrump li.active {
+    background-color: rgb(121, 69, 189);
+}
+
+.breadcrump li.active:after {
+    border-color: transparent transparent transparent rgb(121, 69, 189);
+}

@@ -1,0 +1,66 @@
+.information-links li {
+    margin-bottom: 4px;
+    padding: 2px 8px;
+    background-color: rgb(238, 237, 237);
+}
+
+.information-links li a {
+    color: red;
+}
+
+
+.action-links li {
+    background-color: rgb(245, 245, 245);
+    border: solid 1px rgb(190, 190, 190);
+    padding: 3px;
+}
+
+.action-links li a {
+    display: block; /*aタグはinline要素だけど、縦に並べたいのでblock要素にしている*/
+    padding: 5px 25px;
+    font-size: 23px;
+    color: black;
+    text-decoration: none;
+}
+
+/*:first-childは、同じ種類のタグが並んでいる場合、最初の要素を指定*/
+/*今の状況では、一番上の受付ボタンがターゲットとなる*/
+.action-links li:first-child {
+    /*一番の角だけ丸くしたい場合は*/
+    /*border-radius: 左上 右上 右下 左下; の順番で指定する*/
+    border-radius: 8px 8px 0px 0px;
+}
+
+/*:last-childは文字通り最後の要素*/
+/*今の状況では、本日の診療状況ボタンがターゲット*/
+.action-links li:last-child {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.navigation-links ul {
+    /*ここから*/
+    display: flex;
+    flex-wrap: wrap; /*折り返して表示*/
+    justify-content: space-between;
+    /*ここまでがflexの設定*/
+    padding: 0px 10px;
+}
+
+.navigation-links li {
+    width: 49%; /*横に2つずつ並べたいので、親要素の幅の半分くらいの幅にする*/
+    margin-bottom: 5px;
+    border: solid 1px rgb(190, 190, 190);
+}
+
+.navigation-links li:hover {
+    background-color: aquamarine;
+}
+
+.navigation-links li a {
+    /*ここでは、四角い形全体をクリック対象にしたいのでblock要素にしています
+    display:block;を消して画面をみると、効果がわかりやすいです。*/
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
