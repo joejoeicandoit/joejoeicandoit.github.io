@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2023-11-12T00:38:47+09:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Personal Blog</title><subtitle>This is personal blog.
+</subtitle><author><name>Yeongjune Joe</name></author><entry><title type="html">Jekyll</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2023-11-11T00:00:00+09:00</published><updated>2023-11-11T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html"><![CDATA[<p>This is an draft page.</p>]]></content><author><name>Yeongjune Joe</name></author><category term="Jekyll" /><summary type="html"><![CDATA[This is an draft page.]]></summary></entry><entry><title type="html">Zabbix</title><link href="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" rel="alternate" type="text/html" title="Zabbix" /><published>2023-10-15T00:00:00+09:00</published><updated>2023-10-15T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/zabbix/zabbix</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html"><![CDATA[<h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+
+<p>https://www.zabbix.com/documentation/current/jp/manual</p>
+
+<h2 id="1-install-mariadb-106-on-oracle-linux-8">1. Install MariaDB 10.6 on Oracle Linux 8</h2>
+
+<p>https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/</p>
+
+<p><a href="https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/">Install MariaDB</a></p>
+
+<h2 id="2-download-and-install-zabbix">2. Download and Install Zabbix</h2>
+
+<p>https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache</p>
+
+<h3 id="open-zabbix-ui-web-page">Open Zabbix UI web page</h3>
+
+<p>http://[host]/zabbix</p>
+
+<hr />
+
+<h3 id="issue">Issue</h3>
+
+<ul>
+  <li>Zabbix server is not running
+    <ul>
+      <li><a href="https://jsson.tistory.com/47">https://jsson.tistory.com/47</a></li>
+    </ul>
+  </li>
+  <li>WEBインタフェース(Dashboard)にある時計の表示時刻を変更
+    <ul>
+      <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Yeongjune Joe</name></author><category term="zabbix" /><summary type="html"><![CDATA[Install on Oracle Linux8]]></summary></entry><entry><title type="html">Linux</title><link href="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html" rel="alternate" type="text/html" title="Linux" /><published>2023-10-01T00:00:00+09:00</published><updated>2023-10-01T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/linux/linux</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html"><![CDATA[<h1 id="내가-os설치후-반드시-하는-설정">내가 OS설치후 반드시 하는 설정</h1>
+
+<h2 id="터미널에서-비프음beef-안나게-설정">터미널에서 비프음(Beef) 안나게 설정</h2>
+
+<ul>
+  <li>터미널에서 해당 설정 파일에 필요한 값을 설정한다
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   #vi /etc/inputrc
+  set bell-style none
+</code></pre></div>    </div>
+  </li>
+  <li>터미널을 다시 로그인 해서 무음이 된걸 확인한다
+ <code class="language-plaintext highlighter-rouge"># logout</code></li>
+</ul>
+
+<h2 id="노트북의-경우-커버를-닫아도-슬립-모드로-전환-안하기">(노트북의 경우) 커버를 닫아도 슬립 모드로 전환 안하기</h2>
+
+<ul>
+  <li>터미널에서 해당 설정 파일에 필요한 값을 설정한다
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   # vi /etc/systemd/login.conf
+   HandleLidSwitch=ignore
+</code></pre></div>    </div>
+  </li>
+  <li>아래 서비스를 재시작한다
+ <code class="language-plaintext highlighter-rouge"># systemctl restart systemd-logind.service</code></li>
+</ul>
+
+<h2 id="selinux-무효처리">SELinux 무효처리</h2>
+
+<blockquote>
+  <p>Secutry Enhanced Linux의 약자로 소스코드가 공개되어 있기 때문에 보안성이 취약한 리눅스의 시스템 액세스 권한을 제어하기 위해 미국 국가보안국(NAS)에서 개발한 보안 아키텍처.</p>
+</blockquote>
+
+<p>Android OS 와 ios OS 를 비교하면 알기 쉬운데, 보통 제품에서 보안이 강화되면 사용자의 사용 편리성이 낮아지고, 사용자의 사용 편리성이 높아지면 반대로 보안이 낮아지게 된다.<br /></p>
+
+<h3 id="selinux-동작모드">SELinux 동작모드</h3>
+
+<h4 id="enforcing">enforcing</h4>
+
+<p>SELinux의 기본값으로 보안정책이 실행되어 로그 기록과 보호를 모두 실행하는 상태</p>
+
+<h4 id="permissive">permissive</h4>
+
+<p>SELinux가 보안정책에 대하여 로그는 기록 하지만 실제 차단되지 않는 상태</p>
+
+<h4 id="disable">disable</h4>
+
+<p>SELinux가 비활성화되어 동작하지 않는 상태</p>
+
+<h3 id="selinux-상태확인">SELinux 상태확인</h3>
+
+<p><code class="language-plaintext highlighter-rouge">sestatus</code> 와 <code class="language-plaintext highlighter-rouge">getenforce</code> 의 커맨드로 SELinux 의 상태및 현재 동작모드를 확인할 수 있다</p>
+
+<h3 id="재부팅-없이-일시적으로-모드변경">재부팅 없이 일시적으로 모드변경</h3>
+
+<ul>
+  <li>현재 <code class="language-plaintext highlighter-rouge">enforcing</code> 혹은 <code class="language-plaintext highlighter-rouge">permissive</code> 모드를 사용중이라면 <code class="language-plaintext highlighter-rouge">setenforce</code>커맨드를 사용해서 재부팅없이 일시적으로 모드를 변경할수 있다 (※재부팅 하면 원상태로 돌아옴)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   #setenforce 0   //permissive 모드로 변경
+   #setenforce 1   //enforcing 모드로 변경
+   #getenforce     //모드상태 확인
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">disabled</code>모드를 사용중이라면 <code class="language-plaintext highlighter-rouge">setenforce</code>커맨드로 변경을 할수가 없다</li>
+</ul>
+
+<h3 id="config-수정을-통한-모드변경">Config 수정을 통한 모드변경</h3>
+
+<ul>
+  <li>에디터로 <code class="language-plaintext highlighter-rouge">/etc/selinux/config</code> 파일을 열어 <code class="language-plaintext highlighter-rouge">SELINUX=</code> 뒷부분에 원하는 모드를 기술하고, 재기동 하면 변경된다
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vi /etc/selinux/config
+SELINUX=disabled
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="firewall-무효화">Firewall 무효화</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl stop firewalld
+$ sudo systemctl disable firewalld
+</code></pre></div></div>]]></content><author><name>Yeongjune Joe</name></author><category term="Linux" /><summary type="html"><![CDATA[내가 OS설치후 반드시 하는 설정]]></summary></entry></feed>
