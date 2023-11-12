@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>끄적 끄적 · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="This is personal blog.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Yeongjune Joe"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
 <link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -23,9 +23,11 @@
 
 
 
+            <link rel="prev" href="/jekyll-gitbook/" />
+        
 
         
-            <link rel="next" href="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" />
+            <link rel="next" href="/jekyll-gitbook/linux/2023-10-01-linux.html" />
         
     </head>
     <body>
@@ -107,12 +109,15 @@
 
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html">
                         
                             <a href="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" onclick="pageScrollToTop(this)">
                                 끄적 끄적
                             </a>
                             
+                                
+                                    <ul><li><a href="#1typescript" onclick="mobilePageScrollToAnchor(this)" >1.TypeScript?</a></li><li><a href="#2장점" onclick="mobilePageScrollToAnchor(this)" >2.장점</a></li><li><a href="#3설치" onclick="mobilePageScrollToAnchor(this)" >3.설치</a><ul><li><a href="#참고-링크" onclick="mobilePageScrollToAnchor(this)" >참고 링크</a></li></ul></li></ul></li></ul>
+
                                 
                             
                         </li>
@@ -193,7 +198,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Personal Blog</a>
+                            <a href="." >끄적 끄적</a>
                         
                     </h1>
                 </div>
@@ -206,29 +211,38 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="">Personal Blog</h1>
+                        <h1 id="/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/etc">끄적 끄적</h1>
                     
 
-                    <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+                    <h1 id="1typescript">1.TypeScript?</h1>
 
-<div class="container">
-  <h1>404</h1>
+<p>타입스크립트는 Microsoft 가 개발하고 관리하는 오픈소스 프로그래밍 언어로 어떤 브라우저나 호스트, 운영체제에서도 동작을 지원하는 자바스크립트(ES5)의 Superset(상위확장)이다.<br />
+정적 타이핑을 지원하면 ES6(ECMAScript 2015)의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다.</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<h1 id="2장점">2.장점</h1>
+
+<p>자바스크립트는 사전에 변수나 반환값의 타입을 지정하지 않는 동적 타입언어(dynamic type language) 로서 런타임 속도는 빠르지만, 타입의 안정성이 보장 되지 않는 문제가 있다. 반면 타입스크립트는 <strong>정적 타입언어(static type language)</strong> 로서 컴파일에 약간의 시간이 걸리더라도 타입의 안정성이 보장된다.</p>
+
+<p><strong>1. ES6 모듈및 네임 스페이스</strong><br />
+타입스크립트는 ES6에서 제공하는 모듈 선언과 모듈 호출 방식을 지원한다. 또한 클래스가 커지고 개수가 많아지면 유사한 기능의 클래스들을 그룹으로 구분지어야 할 필요가 생기는데, 이때 타입스크립트에서는 네임스페이스를 지원하여 라이브러리 단위의 모듈 구성에 유리하다.</p>
+
+<p><strong>2. 클래스와 인터페이스</strong><br />
+타입스크립트는 ES6의 클래스 특징을 받아 들리고, 인터페이스 특징을 지원 함으로서 환전한 객체지향</p>
+
+<p><strong>3. 타입 시스템</strong><br />
+타입스크립트는 타입 시스템을 지원한다. 타입 시스템은 자바스크립트의 타입을 확장하고, 타입 어노베이션을 이용해 변수에 타입을 선언할 수 있게 한다. 이렇게 타입이 지정되면 변수는 엄격한 타이핑이 적용돼 타입 안정성을 확보 한다.</p>
+
+<h1 id="3설치">3.설치</h1>
+
+<p>타입 스크립트를 설치하는 방법에는 크게 두 가지가 있다.</p>
+
+<ul>
+  <li>npm을 이용한 설치(Node.js 패키지 매니저)</li>
+  <li>TypeScript 의 Visual Studio 플로그인 설치</li>
+</ul>
+
+<h3 id="참고-링크">참고 링크</h3>
+
 </section>
             </div><div class="search-results">
     <div class="has-results">
@@ -261,12 +275,46 @@ window.MathJax = {
 
 <!-- introduce per-page mermaid support -->
 
-<a href="/jekyll-gitbook/" class="navigation navigation-pre navigation-unique">
-                        <i class="fa"></i>
-                    </a>
+    <script>
+    function render_mermaid() {
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: "default",
+        });
+        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    }
+
+    function initialize_mermaid() {
+        if (document.readyState === "loading") {
+            // Loading hasn't finished yet
+            document.addEventListener("DOMContentLoaded", render_mermaid);
+        } else {
+            // `DOMContentLoaded` has already fired
+            render_mermaid();
+        }
+    }
+
+    if (window.mermaid_script && window.mermaid) {
+        initialize_mermaid();
+    } else {
+        window.mermaid_script = document.createElement("script");
+        mermaid_script.onload = initialize_mermaid;
+        document.head.appendChild(mermaid_script);
+        mermaid_script.defer = true;
+        mermaid_script.id = 'mermaid-script';
+        mermaid_script.src = 'https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js';
+    }
+</script>
+
+
+
+                        <a href="/jekyll-gitbook/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Personal Blog">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
 
                     
-                        <a href="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 끄적 끄적">
+                        <a href="/jekyll-gitbook/linux/2023-10-01-linux.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Linux">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -282,14 +330,12 @@ window.MathJax = {
         "level": "1.1",
         "depth": 1,
         
-
-        
         "next": {
-            "title": "끄적 끄적",
+            "title": "Linux",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-01-01-etc.md",
-            "ref": "_posts/2023-01-01-etc.md",
+            "path": "_posts/2023-10-01-linux.md",
+            "ref": "_posts/2023-10-01-linux.md",
             "articles": []
         },
         
@@ -378,8 +424,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "404.html",
-        "mtime": "",
+        "path": "_posts/2023-01-01-etc.md",
+        "mtime": "2023-10-01 00:00:00 +0900",
         "type": "markdown"
     },
     "gitbook": {

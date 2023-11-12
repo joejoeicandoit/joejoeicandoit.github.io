@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2023-11-12T11:31:19+09:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Personal Blog</title><subtitle>This is personal blog.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2023-11-12T11:42:24+09:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Personal Blog</title><subtitle>This is personal blog.
 </subtitle><author><name>Yeongjune Joe</name></author><entry><title type="html">DNS Server</title><link href="http://localhost:4000/jekyll-gitbook/dns%20server/2023-11-12-dns_server.html" rel="alternate" type="text/html" title="DNS Server" /><published>2023-11-12T00:00:00+09:00</published><updated>2023-11-12T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/dns%20server/dns_server</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/dns%20server/2023-11-12-dns_server.html"><![CDATA[<h1 id="depolying-linux-dns-server">Depolying Linux DNS Server</h1>
 
 <p>Oracle Server8 에 DNS 서버를 구축 해서 운영 하기.</p>
@@ -152,7 +152,34 @@ $ sudo systemctl enable named
       <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
     </ul>
   </li>
-</ul>]]></content><author><name>Yeongjune Joe</name></author><category term="zabbix" /><summary type="html"><![CDATA[Install on Oracle Linux8]]></summary></entry><entry><title type="html">Linux</title><link href="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html" rel="alternate" type="text/html" title="Linux" /><published>2023-10-01T00:00:00+09:00</published><updated>2023-10-01T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/linux/linux</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html"><![CDATA[<h1 id="내가-os설치후-반드시-하는-설정">내가 OS설치후 반드시 하는 설정</h1>
+</ul>]]></content><author><name>Yeongjune Joe</name></author><category term="zabbix" /><summary type="html"><![CDATA[Install on Oracle Linux8]]></summary></entry><entry><title type="html">English</title><link href="http://localhost:4000/jekyll-gitbook/english/2023-10-12-english.html" rel="alternate" type="text/html" title="English" /><published>2023-10-12T00:00:00+09:00</published><updated>2023-10-12T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/english/english</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/english/2023-10-12-english.html"><![CDATA[<h1 id="this-is-english-post">This is English Post</h1>]]></content><author><name>Yeongjune Joe</name></author><category term="English" /><summary type="html"><![CDATA[This is English Post]]></summary></entry><entry><title type="html">끄적 끄적</title><link href="http://localhost:4000/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" rel="alternate" type="text/html" title="끄적 끄적" /><published>2023-10-01T00:00:00+09:00</published><updated>2023-10-01T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/etc</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html"><![CDATA[<h1 id="1typescript">1.TypeScript?</h1>
+
+<p>타입스크립트는 Microsoft 가 개발하고 관리하는 오픈소스 프로그래밍 언어로 어떤 브라우저나 호스트, 운영체제에서도 동작을 지원하는 자바스크립트(ES5)의 Superset(상위확장)이다.<br />
+정적 타이핑을 지원하면 ES6(ECMAScript 2015)의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다.</p>
+
+<h1 id="2장점">2.장점</h1>
+
+<p>자바스크립트는 사전에 변수나 반환값의 타입을 지정하지 않는 동적 타입언어(dynamic type language) 로서 런타임 속도는 빠르지만, 타입의 안정성이 보장 되지 않는 문제가 있다. 반면 타입스크립트는 <strong>정적 타입언어(static type language)</strong> 로서 컴파일에 약간의 시간이 걸리더라도 타입의 안정성이 보장된다.</p>
+
+<p><strong>1. ES6 모듈및 네임 스페이스</strong><br />
+타입스크립트는 ES6에서 제공하는 모듈 선언과 모듈 호출 방식을 지원한다. 또한 클래스가 커지고 개수가 많아지면 유사한 기능의 클래스들을 그룹으로 구분지어야 할 필요가 생기는데, 이때 타입스크립트에서는 네임스페이스를 지원하여 라이브러리 단위의 모듈 구성에 유리하다.</p>
+
+<p><strong>2. 클래스와 인터페이스</strong><br />
+타입스크립트는 ES6의 클래스 특징을 받아 들리고, 인터페이스 특징을 지원 함으로서 환전한 객체지향</p>
+
+<p><strong>3. 타입 시스템</strong><br />
+타입스크립트는 타입 시스템을 지원한다. 타입 시스템은 자바스크립트의 타입을 확장하고, 타입 어노베이션을 이용해 변수에 타입을 선언할 수 있게 한다. 이렇게 타입이 지정되면 변수는 엄격한 타이핑이 적용돼 타입 안정성을 확보 한다.</p>
+
+<h1 id="3설치">3.설치</h1>
+
+<p>타입 스크립트를 설치하는 방법에는 크게 두 가지가 있다.</p>
+
+<ul>
+  <li>npm을 이용한 설치(Node.js 패키지 매니저)</li>
+  <li>TypeScript 의 Visual Studio 플로그인 설치</li>
+</ul>
+
+<h3 id="참고-링크">참고 링크</h3>]]></content><author><name>Yeongjune Joe</name></author><category term="끄적 끄적" /><summary type="html"><![CDATA[1.TypeScript?]]></summary></entry><entry><title type="html">Linux</title><link href="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html" rel="alternate" type="text/html" title="Linux" /><published>2023-10-01T00:00:00+09:00</published><updated>2023-10-01T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/linux/linux</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/linux/2023-10-01-linux.html"><![CDATA[<h1 id="내가-os설치후-반드시-하는-설정">내가 OS설치후 반드시 하는 설정</h1>
 
 <h2 id="터미널에서-비프음beef-안나게-설정">터미널에서 비프음(Beef) 안나게 설정</h2>
 

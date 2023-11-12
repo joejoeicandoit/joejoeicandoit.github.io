@@ -23,9 +23,19 @@
     "keywords": "zabbix",
     "url": "/jekyll-gitbook/zabbix/2023-10-15-zabbix.html",
     "body": "Install on Oracle Linux8 https://www.zabbix.com/documentation/current/jp/manual 1. Install MariaDB 10.6 on Oracle Linux 8 https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/ Install MariaDB 2. Download and Install Zabbix https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache Open Zabbix UI web page http://[host]/zabbix Issue Zabbix server is not running https://jsson.tistory.com/47 WEBインタフェース(Dashboard)にある時計の表示時刻を変更 [User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]"
+  },"/jekyll-gitbook/english/2023-10-12-english.html": {
+    "title": "English",
+    "keywords": "English",
+    "url": "/jekyll-gitbook/english/2023-10-12-english.html",
+    "body": "This is English Post"
   },"/jekyll-gitbook/linux/2023-10-01-linux.html": {
     "title": "Linux",
     "keywords": "Linux",
     "url": "/jekyll-gitbook/linux/2023-10-01-linux.html",
     "body": "내가 OS설치후 반드시 하는 설정 터미널에서 비프음(Beef) 안나게 설정 터미널에서 해당 설정 파일에 필요한 값을 설정한다 #vi /etc/inputrc set bell-style none 터미널을 다시 로그인 해서 무음이 된걸 확인한다 # logout (노트북의 경우) 커버를 닫아도 슬립 모드로 전환 안하기 터미널에서 해당 설정 파일에 필요한 값을 설정한다 # vi /etc/systemd/login.conf HandleLidSwitch=ignore 아래 서비스를 재시작한다 # systemctl restart systemd-logind.service SELinux 무효처리 Secutry Enhanced Linux의 약자로 소스코드가 공개되어 있기 때문에 보안성이 취약한 리눅스의 시스템 액세스 권한을 제어하기 위해 미국 국가보안국(NAS)에서 개발한 보안 아키텍처. Android OS 와 ios OS 를 비교하면 알기 쉬운데, 보통 제품에서 보안이 강화되면 사용자의 사용 편리성이 낮아지고, 사용자의 사용 편리성이 높아지면 반대로 보안이 낮아지게 된다. SELinux 동작모드 enforcing SELinux의 기본값으로 보안정책이 실행되어 로그 기록과 보호를 모두 실행하는 상태 permissive SELinux가 보안정책에 대하여 로그는 기록 하지만 실제 차단되지 않는 상태 disable SELinux가 비활성화되어 동작하지 않는 상태 SELinux 상태확인 sestatus 와 getenforce 의 커맨드로 SELinux 의 상태및 현재 동작모드를 확인할 수 있다 재부팅 없이 일시적으로 모드변경 현재 enforcing 혹은 permissive 모드를 사용중이라면 setenforce커맨드를 사용해서 재부팅없이 일시적으로 모드를 변경할수 있다 (※재부팅 하면 원상태로 돌아옴) #setenforce 0 //permissive 모드로 변경 #setenforce 1 //enforcing 모드로 변경 #getenforce //모드상태 확인 disabled모드를 사용중이라면 setenforce커맨드로 변경을 할수가 없다 Config 수정을 통한 모드변경 에디터로 /etc/selinux/config 파일을 열어 SELINUX= 뒷부분에 원하는 모드를 기술하고, 재기동 하면 변경된다 $ sudo vi /etc/selinux/config SELINUX=disabled Firewall 무효화 $ sudo systemctl stop firewalld $ sudo systemctl disable firewalld"
+  },"/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html": {
+    "title": "끄적 끄적",
+    "keywords": "끄적 끄적",
+    "url": "/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html",
+    "body": "1.TypeScript? 타입스크립트는 Microsoft 가 개발하고 관리하는 오픈소스 프로그래밍 언어로 어떤 브라우저나 호스트, 운영체제에서도 동작을 지원하는 자바스크립트(ES5)의 Superset(상위확장)이다. 정적 타이핑을 지원하면 ES6(ECMAScript 2015)의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다. 2.장점 자바스크립트는 사전에 변수나 반환값의 타입을 지정하지 않는 동적 타입언어(dynamic type language) 로서 런타임 속도는 빠르지만, 타입의 안정성이 보장 되지 않는 문제가 있다. 반면 타입스크립트는 정적 타입언어(static type language) 로서 컴파일에 약간의 시간이 걸리더라도 타입의 안정성이 보장된다. 1. ES6 모듈및 네임 스페이스 타입스크립트는 ES6에서 제공하는 모듈 선언과 모듈 호출 방식을 지원한다. 또한 클래스가 커지고 개수가 많아지면 유사한 기능의 클래스들을 그룹으로 구분지어야 할 필요가 생기는데, 이때 타입스크립트에서는 네임스페이스를 지원하여 라이브러리 단위의 모듈 구성에 유리하다. 2. 클래스와 인터페이스 타입스크립트는 ES6의 클래스 특징을 받아 들리고, 인터페이스 특징을 지원 함으로서 환전한 객체지향 3. 타입 시스템 타입스크립트는 타입 시스템을 지원한다. 타입 시스템은 자바스크립트의 타입을 확장하고, 타입 어노베이션을 이용해 변수에 타입을 선언할 수 있게 한다. 이렇게 타입이 지정되면 변수는 엄격한 타이핑이 적용돼 타입 안정성을 확보 한다. 3.설치 타입 스크립트를 설치하는 방법에는 크게 두 가지가 있다. npm을 이용한 설치(Node.js 패키지 매니저) TypeScript 의 Visual Studio 플로그인 설치 참고 링크"
   }}
