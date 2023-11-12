@@ -258,6 +258,38 @@ window.MathJax = {
 
 <!-- introduce per-page mermaid support -->
 
+    <script>
+    function render_mermaid() {
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: "default",
+        });
+        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    }
+
+    function initialize_mermaid() {
+        if (document.readyState === "loading") {
+            // Loading hasn't finished yet
+            document.addEventListener("DOMContentLoaded", render_mermaid);
+        } else {
+            // `DOMContentLoaded` has already fired
+            render_mermaid();
+        }
+    }
+
+    if (window.mermaid_script && window.mermaid) {
+        initialize_mermaid();
+    } else {
+        window.mermaid_script = document.createElement("script");
+        mermaid_script.onload = initialize_mermaid;
+        document.head.appendChild(mermaid_script);
+        mermaid_script.defer = true;
+        mermaid_script.id = 'mermaid-script';
+        mermaid_script.src = 'https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js';
+    }
+</script>
+
+
 
                         <a href="/jekyll-gitbook/linux/2023-10-01-linux.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Linux">
                             <i class="fa fa-angle-left"></i>
@@ -314,7 +346,7 @@ window.MathJax = {
                 "maxIndexSize": 1000000
             },
             "search": {},            "sharing": {
-                "facebook": true,
+                "facebook": false,
 
                 "google": false,
 
@@ -381,7 +413,7 @@ window.MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2023-11-12 10:19:37 +0900"
+        "time": "2023-11-12 10:35:17 +0900"
     },
     "basePath": "/jekyll-gitbook",
     "book": {
