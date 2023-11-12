@@ -1,5 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2023-11-12T00:38:47+09:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Personal Blog</title><subtitle>This is personal blog.
-</subtitle><author><name>Yeongjune Joe</name></author><entry><title type="html">Jekyll</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2023-11-11T00:00:00+09:00</published><updated>2023-11-11T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html"><![CDATA[<p>This is an draft page.</p>]]></content><author><name>Yeongjune Joe</name></author><category term="Jekyll" /><summary type="html"><![CDATA[This is an draft page.]]></summary></entry><entry><title type="html">Zabbix</title><link href="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" rel="alternate" type="text/html" title="Zabbix" /><published>2023-10-15T00:00:00+09:00</published><updated>2023-10-15T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/zabbix/zabbix</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html"><![CDATA[<h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/jekyll-gitbook/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll-gitbook/" rel="alternate" type="text/html" /><updated>2023-11-12T10:19:37+09:00</updated><id>http://localhost:4000/jekyll-gitbook/feed.xml</id><title type="html">Personal Blog</title><subtitle>This is personal blog.
+</subtitle><author><name>Yeongjune Joe</name></author><entry><title type="html">DNS Server</title><link href="http://localhost:4000/jekyll-gitbook/dns%20server/2023-11-12-dns_server.html" rel="alternate" type="text/html" title="DNS Server" /><published>2023-11-12T00:00:00+09:00</published><updated>2023-11-12T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/dns%20server/dns_server</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/dns%20server/2023-11-12-dns_server.html"><![CDATA[<h1 id="depolying-linux-dns-server">Depolying Linux DNS Server</h1>
+
+<p>Oracle Server8 에 DNS 서버를 구축 해서 운영 하기.</p>
+
+<h3 id="1-installing-bind-package">1. Installing bind package</h3>
+<p>Bind 란?
+BIND는(Berkeley Internet Name Domain)의 약자로, DNS를 운용하기 위한 데몬 프로그램으로서 Unix 계열의 OS에서 사용되도록 구현된 프로그램 입니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo dnf install bind bind-chroot bind-utils
+</code></pre></div></div>
+
+<h3 id="2-namedconf-settings">2. named.conf settings</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim /etc/named.conf
+
+  listen-on port 53 { any; };   //Modify
+  allow-query { any; };         //Modify
+  masterfile-format text;       //Addition
+</code></pre></div></div>
+<p><img src="https://github.com/joeyeongjune/joeyeongjune.github.io/assets/42788315/f90f1aea-a41b-4543-b9dd-b7a3942f78e0" alt="image" /></p>
+
+<h3 id="3-namedconf-validation-check">3. named.conf validation check</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo named-checkconf /etc/named.conf
+</code></pre></div></div>
+<p>If there is no output, there is no problem</p>
+
+<h3 id="4-add-domain-zone-information">4. Add domain zone information</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim /etc/named.rfc1912.zones
+
+・・・
+zone "tickle.com" IN {
+        type master;
+        file "tickle.com.zone";
+        allow-update { none; };
+};
+</code></pre></div></div>
+
+<h3 id="5-create-zone-files-and-change-permissions">5. Create zone files and change permissions</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ls -l /var/named/named.localhost
+  -rw-r-----. 1 root named 152 Oct  7 02:51 /var/named/named.localhost
+
+$ sudo cp -p /var/named/named.localhost /var/named/tickle.com.zone
+$ sudo ls -l /var/named/tickle.oracle8.zone
+  -rw-r-----. 1 root named 152 Oct  7 02:51 /var/named/tickle.com.zone
+</code></pre></div></div>
+
+<h3 id="6-zone-file-record-modification">6. zone file record modification</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim /var/named/tickle.com.zone
+
+$TTL 1D
+@       IN SOA  tickle.com. root.(
+                          0       ; serial
+                          1D      ; refresh
+                          1H      ; retry
+                          1W      ; expire
+                          3H )    ; minimum
+        IN NS   tickle.com.
+        IN A    192.168.0.200
+www     IN A    192.168.0.200
+</code></pre></div></div>
+
+<h3 id="7-zone-file-settings-and-zone-file-validation-check">7. zone file settings and zone file validation check</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo named-checkconf /etc/named.rfc1912.zones
+  If there is no output, there is no problem
+
+$ sudo named-checkzone tickle.com /var/named/tickle.com.zone
+  zone tickle.com/IN: loaded serial 0
+  OK
+</code></pre></div></div>
+
+<h3 id="8-etcresolvconf-dns-127001-registration">8. /etc/resolv.conf DNS 127.0.0.1 registration</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ls -l /etc/resolv.conf
+  -rw-r--r--. 1 root root 82 Oct 16 16:50 /etc/resolv.conf
+$ sudo cp -p /etc/resolv.conf /etc/resolv.conf.back
+$ sudo vim /etc/resolv.conf
+  # Generated by NetworkManager
+  nameserver 127.0.0.1
+  nameserver 58.159.201.244
+  nameserver 61.122.116.174
+</code></pre></div></div>
+
+<p><img src="https://github.com/joeyeongjune/joeyeongjune.github.io/assets/42788315/60ab6398-fa6b-4e21-ad0a-56bd8925670c" alt="image" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nmcli device
+  DEVICE   TYPE      STATE      CONNECTION
+  enp0s25  ethernet  connected  enp0s25
+  lo       loopback  unmanaged  --
+  wlo1     wifi      unmanaged  --
+
+$ sudo nmcli con up enp0s25
+  Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/2)
+</code></pre></div></div>
+
+<h3 id="9-named-service-restart-and-service-auto-excution-registration">9. Named service restart and service auto-excution registration</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl restart named
+$ sudo systemctl enable named
+  Created symlink /etc/systemd/system/multi-user.target.wants/named.service → /usr/lib/systemd/system/named.service.
+</code></pre></div></div>
+
+<h3 id="10-verify-registered-domain-and-ip">10. Verify Registered Domain and IP</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup
+  &gt; tickle.com
+  Server:         127.0.0.1
+  Address:        127.0.0.1#53
+
+  Name:   tickle.com
+  Address: 192.168.0.200
+</code></pre></div></div>
+
+<h3 id="issues">Issues</h3>
+
+<ul>
+  <li><a href="https://it-serial.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-DNS-%EC%84%A4%EC%A0%95-%EB%B2%88%EC%99%B8%ED%8E%B8-resolvconf-%ED%8C%8C%EC%9D%BC%EC%B4%88%EA%B8%B0%ED%99%94-%ED%98%84%EC%83%81-%EC%84%A4%EB%AA%85">resolv.conf 초기화 현상</a></li>
+</ul>]]></content><author><name>Yeongjune Joe</name></author><category term="DNS Server" /><summary type="html"><![CDATA[Depolying Linux DNS Server]]></summary></entry><entry><title type="html">Jekyll</title><link href="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2023-11-11T00:00:00+09:00</published><updated>2023-11-11T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/jekyll/jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/jekyll/2023-11-11-jekyll.html"><![CDATA[<p>This is an draft page.</p>]]></content><author><name>Yeongjune Joe</name></author><category term="Jekyll" /><summary type="html"><![CDATA[This is an draft page.]]></summary></entry><entry><title type="html">Zabbix</title><link href="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" rel="alternate" type="text/html" title="Zabbix" /><published>2023-10-15T00:00:00+09:00</published><updated>2023-10-15T00:00:00+09:00</updated><id>http://localhost:4000/jekyll-gitbook/zabbix/zabbix</id><content type="html" xml:base="http://localhost:4000/jekyll-gitbook/zabbix/2023-10-15-zabbix.html"><![CDATA[<h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
 
 <p>https://www.zabbix.com/documentation/current/jp/manual</p>
 
