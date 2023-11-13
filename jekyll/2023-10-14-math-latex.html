@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Zabbix · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>MathJax and LaTeX · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="This is personal blog.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Yeongjune Joe"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
 <link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -23,11 +23,11 @@
 
 
 
-            <link rel="prev" href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" />
+            <link rel="prev" href="/jekyll-gitbook/english/2023-10-12-english.html" />
         
 
         
-            <link rel="next" href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" />
+            <link rel="next" href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" />
         
     </head>
     <body>
@@ -230,26 +230,26 @@
                         </li>
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html">
                         
                             <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" onclick="pageScrollToTop(this)">
                                 MathJax and LaTeX
                             </a>
                             
                                 
+                                    
+
+                                
                             
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
                         
                             <a href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" onclick="pageScrollToTop(this)">
                                 Zabbix
                             </a>
                             
-                                
-                                    <ul><li><a href="#install-on-oracle-linux8" onclick="mobilePageScrollToAnchor(this)" >Install on Oracle Linux8</a><ul><li><a href="#1-install-mariadb-106-on-oracle-linux-8" onclick="mobilePageScrollToAnchor(this)" >1. Install MariaDB 10.6 on Oracle Linux 8</a></li><li><a href="#2-download-and-install-zabbix" onclick="mobilePageScrollToAnchor(this)" >2. Download and Install Zabbix</a><ul><li><a href="#open-zabbix-ui-web-page" onclick="mobilePageScrollToAnchor(this)" >Open Zabbix UI web page</a></li><li><a href="#issue" onclick="mobilePageScrollToAnchor(this)" >Issue</a></li></ul></li></ul></li></ul>
-
                                 
                             
                         </li>
@@ -297,7 +297,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Zabbix</a>
+                            <a href="." >MathJax and LaTeX</a>
                         
                     </h1>
                 </div>
@@ -310,43 +310,46 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/zabbix/zabbix">Zabbix</h1>
+                        <h1 id="/jekyll/math-latex">MathJax and LaTeX</h1>
                     
 
-                    <h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+                    <p>This jekyll-theme supports <a href="https://www.mathjax.org/">MathJax</a> to render $\LaTeX$
+and mathematics expressions.</p>
 
-<p>https://www.zabbix.com/documentation/current/jp/manual</p>
+<blockquote class="block-tip">
+  <h5 id="tip">TIP</h5>
 
-<h2 id="1-install-mariadb-106-on-oracle-linux-8">1. Install MariaDB 10.6 on Oracle Linux 8</h2>
+  <p>Currently, Kramdown uses double dollar sign delimiters for inline and display math:
+<a href="https://kramdown.gettalong.org/syntax.html#math-blocks">https://kramdown.gettalong.org/syntax.html#math-blocks</a>.</p>
+</blockquote>
 
-<p>https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/</p>
+<p>e.g.,</p>
 
-<p><a href="https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/">Install MariaDB</a></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The well known Pythagorean theorem $x^2 + y^2 = z^2$ was
+proved to be invalid for other exponents.
+Meaning the next equation has no integer solutions:
 
-<h2 id="2-download-and-install-zabbix">2. Download and Install Zabbix</h2>
+$$ x^n + y^n = z^n $$
+</code></pre></div></div>
 
-<p>https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache</p>
+<p>The well known Pythagorean theorem $x^2 + y^2 = z^2$ was
+proved to be invalid for other exponents.
+Meaning the next equation has no integer solutions:</p>
 
-<h3 id="open-zabbix-ui-web-page">Open Zabbix UI web page</h3>
+\[x^n + y^n = z^n\]
 
-<p>http://[host]/zabbix</p>
+<p>Another example with more complex markups:</p>
 
-<hr />
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>When $a <span class="se">\n</span>e 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
-<h3 id="issue">Issue</h3>
+$$x = {-b <span class="se">\p</span>m <span class="se">\s</span>qrt{b^2-4ac} <span class="se">\o</span>ver 2a}.$$
+</code></pre></div></div>
 
-<ul>
-  <li>Zabbix server is not running
-    <ul>
-      <li><a href="https://jsson.tistory.com/47">https://jsson.tistory.com/47</a></li>
-    </ul>
-  </li>
-  <li>WEBインタフェース(Dashboard)にある時計の表示時刻を変更
-    <ul>
-      <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
-    </ul>
-  </li>
-</ul>
+<p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
+
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+
+<p>Refer to the <a href="https://docs.mathjax.org/en/latest/index.html">MathJax website</a> for more examples.</p>
 </section>
             </div><div class="search-results">
     <div class="has-results">
@@ -412,13 +415,13 @@ window.MathJax = {
 
 
 
-                        <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MathJax and LaTeX">
+                        <a href="/jekyll-gitbook/english/2023-10-12-english.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: English">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Jekyll">
+                        <a href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Zabbix">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -435,11 +438,11 @@ window.MathJax = {
         "depth": 1,
         
         "next": {
-            "title": "Jekyll",
+            "title": "Zabbix",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-11-11-jekyll.md",
-            "ref": "_posts/2023-11-11-jekyll.md",
+            "path": "_posts/2023-10-15-zabbix.md",
+            "ref": "_posts/2023-10-15-zabbix.md",
             "articles": []
         },
         
@@ -528,8 +531,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2023-10-15-zabbix.md",
-        "mtime": "2023-10-15 00:00:00 +0900",
+        "path": "_posts/2023-10-14-math-latex.md",
+        "mtime": "2023-10-14 00:00:00 +0900",
         "type": "markdown"
     },
     "gitbook": {

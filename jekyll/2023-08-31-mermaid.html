@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Zabbix · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Diagrams with mermaid.js · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="This is personal blog.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Yeongjune Joe"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
 <link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -23,11 +23,11 @@
 
 
 
-            <link rel="prev" href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" />
+            <link rel="prev" href="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html" />
         
 
         
-            <link rel="next" href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" />
+            <link rel="next" href="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" />
         
     </head>
     <body>
@@ -186,12 +186,15 @@
                         </li>
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html">
                         
                             <a href="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html" onclick="pageScrollToTop(this)">
                                 Diagrams with mermaid.js
                             </a>
                             
+                                
+                                    
+
                                 
                             
                         </li>
@@ -241,15 +244,12 @@
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
                         
                             <a href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" onclick="pageScrollToTop(this)">
                                 Zabbix
                             </a>
                             
-                                
-                                    <ul><li><a href="#install-on-oracle-linux8" onclick="mobilePageScrollToAnchor(this)" >Install on Oracle Linux8</a><ul><li><a href="#1-install-mariadb-106-on-oracle-linux-8" onclick="mobilePageScrollToAnchor(this)" >1. Install MariaDB 10.6 on Oracle Linux 8</a></li><li><a href="#2-download-and-install-zabbix" onclick="mobilePageScrollToAnchor(this)" >2. Download and Install Zabbix</a><ul><li><a href="#open-zabbix-ui-web-page" onclick="mobilePageScrollToAnchor(this)" >Open Zabbix UI web page</a></li><li><a href="#issue" onclick="mobilePageScrollToAnchor(this)" >Issue</a></li></ul></li></ul></li></ul>
-
                                 
                             
                         </li>
@@ -297,7 +297,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Zabbix</a>
+                            <a href="." >Diagrams with mermaid.js</a>
                         
                     </h1>
                 </div>
@@ -310,43 +310,68 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/zabbix/zabbix">Zabbix</h1>
+                        <h1 id="/jekyll/mermaid">Diagrams with mermaid.js</h1>
                     
 
-                    <h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+                    <p>This jekyll-theme supports <a href="https://mermaid.js.org/">mermaid.js</a> to render diagrams
+in markdown.</p>
 
-<p>https://www.zabbix.com/documentation/current/jp/manual</p>
+<p>To enable the mermaid support, you need to set <code class="language-plaintext highlighter-rouge">mermaid: true</code> in the front matter
+of your post.</p>
 
-<h2 id="1-install-mariadb-106-on-oracle-linux-8">1. Install MariaDB 10.6 on Oracle Linux 8</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Diagrams with mermaid.js</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2023-08-31</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">mermaid</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
 
-<p>https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/</p>
+<p>Then you can use mermaid syntax in your markdown:</p>
 
-<p><a href="https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/">Install MariaDB</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre></div></div>
 
-<h2 id="2-download-and-install-zabbix">2. Download and Install Zabbix</h2>
+<pre><code class="language-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
 
-<p>https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache</p>
+<p>Or, even some complex examples:</p>
 
-<h3 id="open-zabbix-ui-web-page">Open Zabbix UI web page</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre></div></div>
 
-<p>http://[host]/zabbix</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre>
 
-<hr />
-
-<h3 id="issue">Issue</h3>
-
-<ul>
-  <li>Zabbix server is not running
-    <ul>
-      <li><a href="https://jsson.tistory.com/47">https://jsson.tistory.com/47</a></li>
-    </ul>
-  </li>
-  <li>WEBインタフェース(Dashboard)にある時計の表示時刻を変更
-    <ul>
-      <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
-    </ul>
-  </li>
-</ul>
+<p>Refer to the <a href="https://mermaid.js.org/intro/">mermaid.js website</a> for more examples.</p>
 </section>
             </div><div class="search-results">
     <div class="has-results">
@@ -412,13 +437,13 @@ window.MathJax = {
 
 
 
-                        <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MathJax and LaTeX">
+                        <a href="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Tips, Warnings, and Dangers">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Jekyll">
+                        <a href="/jekyll-gitbook/%EB%81%84%EC%A0%81%20%EB%81%84%EC%A0%81/2023-10-01-etc.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 끄적 끄적">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -435,11 +460,11 @@ window.MathJax = {
         "depth": 1,
         
         "next": {
-            "title": "Jekyll",
+            "title": "끄적 끄적",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-11-11-jekyll.md",
-            "ref": "_posts/2023-11-11-jekyll.md",
+            "path": "_posts/2023-01-01-etc.md",
+            "ref": "_posts/2023-01-01-etc.md",
             "articles": []
         },
         
@@ -528,8 +553,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2023-10-15-zabbix.md",
-        "mtime": "2023-10-15 00:00:00 +0900",
+        "path": "_posts/2023-08-31-mermaid.md",
+        "mtime": "2023-08-31 00:00:00 +0900",
         "type": "markdown"
     },
     "gitbook": {

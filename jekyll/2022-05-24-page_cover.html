@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Zabbix · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Page with cover image · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="This is personal blog.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Yeongjune Joe"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
 <link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -23,11 +23,11 @@
 
 
 
-            <link rel="prev" href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" />
+            <link rel="prev" href="/jekyll-gitbook/jekyll/2021-08-10-toc.html" />
         
 
         
-            <link rel="next" href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" />
+            <link rel="next" href="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html" />
         
     </head>
     <body>
@@ -153,12 +153,15 @@
                         </li>
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2022-05-24-page_cover.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/jekyll/2022-05-24-page_cover.html">
                         
                             <a href="/jekyll-gitbook/jekyll/2022-05-24-page_cover.html" onclick="pageScrollToTop(this)">
                                 Page with cover image
                             </a>
                             
+                                
+                                    
+
                                 
                             
                         </li>
@@ -241,15 +244,12 @@
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
                         
                             <a href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" onclick="pageScrollToTop(this)">
                                 Zabbix
                             </a>
                             
-                                
-                                    <ul><li><a href="#install-on-oracle-linux8" onclick="mobilePageScrollToAnchor(this)" >Install on Oracle Linux8</a><ul><li><a href="#1-install-mariadb-106-on-oracle-linux-8" onclick="mobilePageScrollToAnchor(this)" >1. Install MariaDB 10.6 on Oracle Linux 8</a></li><li><a href="#2-download-and-install-zabbix" onclick="mobilePageScrollToAnchor(this)" >2. Download and Install Zabbix</a><ul><li><a href="#open-zabbix-ui-web-page" onclick="mobilePageScrollToAnchor(this)" >Open Zabbix UI web page</a></li><li><a href="#issue" onclick="mobilePageScrollToAnchor(this)" >Issue</a></li></ul></li></ul></li></ul>
-
                                 
                             
                         </li>
@@ -297,12 +297,19 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Zabbix</a>
+                            <a href="." >Page with cover image</a>
                         
                     </h1>
                 </div>
 
                 <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+        <img src="https://sighingnow.github.io/jekyll-gitbook/assets/dinosaur.gif"
+             width="100%"
+             height="100%"
+             alt="Page with cover image"
+             style="object-fit: cover;"
+        />
     
 
     <div class="page-inner">
@@ -310,43 +317,21 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/zabbix/zabbix">Zabbix</h1>
+                        <h1 id="/jekyll/page_cover">Page with cover image</h1>
                     
 
-                    <h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+                    <p>The jekyll-gitbook theme supports adding a cover image to a specific page by adding
+a <code class="language-plaintext highlighter-rouge">cover</code> field to the page metadata:</p>
 
-<p>https://www.zabbix.com/documentation/current/jp/manual</p>
-
-<h2 id="1-install-mariadb-106-on-oracle-linux-8">1. Install MariaDB 10.6 on Oracle Linux 8</h2>
-
-<p>https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/</p>
-
-<p><a href="https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/">Install MariaDB</a></p>
-
-<h2 id="2-download-and-install-zabbix">2. Download and Install Zabbix</h2>
-
-<p>https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache</p>
-
-<h3 id="open-zabbix-ui-web-page">Open Zabbix UI web page</h3>
-
-<p>http://[host]/zabbix</p>
-
-<hr />
-
-<h3 id="issue">Issue</h3>
-
-<ul>
-  <li>Zabbix server is not running
-    <ul>
-      <li><a href="https://jsson.tistory.com/47">https://jsson.tistory.com/47</a></li>
-    </ul>
-  </li>
-  <li>WEBインタフェース(Dashboard)にある時計の表示時刻を変更
-    <ul>
-      <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
-    </ul>
-  </li>
-</ul>
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ---
+  title: Page with cover image
+  author: Tao He
+  date: 2022-05-24
+  category: Jekyll
+  layout: post
+<span class="gi">+ cover: /assets/jekyll-gitbook/dinosaur.gif
+</span>  ---
+</code></pre></div></div>
 </section>
             </div><div class="search-results">
     <div class="has-results">
@@ -379,46 +364,14 @@ window.MathJax = {
 
 <!-- introduce per-page mermaid support -->
 
-    <script>
-    function render_mermaid() {
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: "default",
-        });
-        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-    }
 
-    function initialize_mermaid() {
-        if (document.readyState === "loading") {
-            // Loading hasn't finished yet
-            document.addEventListener("DOMContentLoaded", render_mermaid);
-        } else {
-            // `DOMContentLoaded` has already fired
-            render_mermaid();
-        }
-    }
-
-    if (window.mermaid_script && window.mermaid) {
-        initialize_mermaid();
-    } else {
-        window.mermaid_script = document.createElement("script");
-        mermaid_script.onload = initialize_mermaid;
-        document.head.appendChild(mermaid_script);
-        mermaid_script.defer = true;
-        mermaid_script.id = 'mermaid-script';
-        mermaid_script.src = 'https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js';
-    }
-</script>
-
-
-
-                        <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MathJax and LaTeX">
+                        <a href="/jekyll-gitbook/jekyll/2021-08-10-toc.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: How to Generate TOC">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Jekyll">
+                        <a href="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Wide tables">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -435,11 +388,11 @@ window.MathJax = {
         "depth": 1,
         
         "next": {
-            "title": "Jekyll",
+            "title": "Wide tables",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-11-11-jekyll.md",
-            "ref": "_posts/2023-11-11-jekyll.md",
+            "path": "_posts/2022-06-26-wide_tables.md",
+            "ref": "_posts/2022-06-26-wide_tables.md",
             "articles": []
         },
         
@@ -528,8 +481,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2023-10-15-zabbix.md",
-        "mtime": "2023-10-15 00:00:00 +0900",
+        "path": "_posts/2022-05-24-page_cover.md",
+        "mtime": "2022-05-24 00:00:00 +0900",
         "type": "markdown"
     },
     "gitbook": {

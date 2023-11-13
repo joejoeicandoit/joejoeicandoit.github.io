@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Zabbix · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Tips, Warnings, and Dangers · Personal Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="This is personal blog.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Yeongjune Joe"><link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/style.css">
 <link rel="stylesheet" href="/jekyll-gitbook/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -23,11 +23,11 @@
 
 
 
-            <link rel="prev" href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" />
+            <link rel="prev" href="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html" />
         
 
         
-            <link rel="next" href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" />
+            <link rel="next" href="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html" />
         
     </head>
     <body>
@@ -175,12 +175,15 @@
                         </li>
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">
                         
                             <a href="/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html" onclick="pageScrollToTop(this)">
                                 Tips, Warnings, and Dangers
                             </a>
                             
+                                
+                                    <ul><li><a href="#tips" onclick="mobilePageScrollToAnchor(this)" >Tips</a></li><li><a href="#warnings" onclick="mobilePageScrollToAnchor(this)" >Warnings</a></li><li><a href="#dangers" onclick="mobilePageScrollToAnchor(this)" >Dangers</a></li></ul>
+
                                 
                             
                         </li>
@@ -241,15 +244,12 @@
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html">
                         
                             <a href="/jekyll-gitbook/zabbix/2023-10-15-zabbix.html" onclick="pageScrollToTop(this)">
                                 Zabbix
                             </a>
                             
-                                
-                                    <ul><li><a href="#install-on-oracle-linux8" onclick="mobilePageScrollToAnchor(this)" >Install on Oracle Linux8</a><ul><li><a href="#1-install-mariadb-106-on-oracle-linux-8" onclick="mobilePageScrollToAnchor(this)" >1. Install MariaDB 10.6 on Oracle Linux 8</a></li><li><a href="#2-download-and-install-zabbix" onclick="mobilePageScrollToAnchor(this)" >2. Download and Install Zabbix</a><ul><li><a href="#open-zabbix-ui-web-page" onclick="mobilePageScrollToAnchor(this)" >Open Zabbix UI web page</a></li><li><a href="#issue" onclick="mobilePageScrollToAnchor(this)" >Issue</a></li></ul></li></ul></li></ul>
-
                                 
                             
                         </li>
@@ -297,7 +297,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Zabbix</a>
+                            <a href="." >Tips, Warnings, and Dangers</a>
                         
                     </h1>
                 </div>
@@ -310,43 +310,66 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/zabbix/zabbix">Zabbix</h1>
+                        <h1 id="/jekyll/tips_warnings_dangers">Tips, Warnings, and Dangers</h1>
                     
 
-                    <h1 id="install-on-oracle-linux8">Install on Oracle Linux8</h1>
+                    <p>This jekyll-theme supports tips, warnings, and dangers blocks and the style is referred
+from <a href="https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas">the discord.js website</a>.</p>
 
-<p>https://www.zabbix.com/documentation/current/jp/manual</p>
+<p>You could have the following <a href="https://kramdown.gettalong.org/quickref.html#block-attributes">markdown attributes (supported by kramdown)</a>:</p>
 
-<h2 id="1-install-mariadb-106-on-oracle-linux-8">1. Install MariaDB 10.6 on Oracle Linux 8</h2>
+<h3 id="tips">Tips</h3>
 
-<p>https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/</p>
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-tip}</code> attribute:</p>
 
-<p><a href="https://techviewleo.com/install-mariadb-on-oracle-rocky-linux/">Install MariaDB</a></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### TIP</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have</span>
+<span class="gt">&gt; this or a similar version after installation.</span>
+{: .block-tip }
+</code></pre></div></div>
 
-<h2 id="2-download-and-install-zabbix">2. Download and Install Zabbix</h2>
+<blockquote class="block-tip">
+  <h5 id="tip">TIP</h5>
 
-<p>https://www.zabbix.com/jp/download?zabbix=6.0&amp;os_distribution=oracle_linux&amp;os_version=8&amp;components=server_frontend_agent&amp;db=mysql&amp;ws=apache</p>
+  <p>This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
+this or a similar version after installation.</p>
+</blockquote>
 
-<h3 id="open-zabbix-ui-web-page">Open Zabbix UI web page</h3>
+<h3 id="warnings">Warnings</h3>
 
-<p>http://[host]/zabbix</p>
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-warning}</code> attribute:</p>
 
-<hr />
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; Be sure that you're familiar with things like async/await and object destructuring</span>
+<span class="gt">&gt; before continuing, as we'll be making use of features like these.</span>
+{: .block-warning }
+</code></pre></div></div>
 
-<h3 id="issue">Issue</h3>
+<blockquote class="block-warning">
+  <h5 id="warning">WARNING</h5>
 
-<ul>
-  <li>Zabbix server is not running
-    <ul>
-      <li><a href="https://jsson.tistory.com/47">https://jsson.tistory.com/47</a></li>
-    </ul>
-  </li>
-  <li>WEBインタフェース(Dashboard)にある時計の表示時刻を変更
-    <ul>
-      <li>[User Settings] - [Profile] - [Time zone] - [(UTC+09:00) Asia/Tokyo]</li>
-    </ul>
-  </li>
-</ul>
+  <p>Be sure that you’re familiar with things like async/await and object destructuring
+before continuing, as we’ll be making use of features like these.</p>
+</blockquote>
+
+<h3 id="dangers">Dangers</h3>
+
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-danger}</code> attribute:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### DANGER</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; You cannot delete an ephemeral message.</span>
+{: .block-danger }
+</code></pre></div></div>
+
+<blockquote class="block-danger">
+  <h5 id="danger">DANGER</h5>
+
+  <p>You cannot delete an ephemeral message.</p>
+</blockquote>
+
 </section>
             </div><div class="search-results">
     <div class="has-results">
@@ -379,46 +402,14 @@ window.MathJax = {
 
 <!-- introduce per-page mermaid support -->
 
-    <script>
-    function render_mermaid() {
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: "default",
-        });
-        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-    }
 
-    function initialize_mermaid() {
-        if (document.readyState === "loading") {
-            // Loading hasn't finished yet
-            document.addEventListener("DOMContentLoaded", render_mermaid);
-        } else {
-            // `DOMContentLoaded` has already fired
-            render_mermaid();
-        }
-    }
-
-    if (window.mermaid_script && window.mermaid) {
-        initialize_mermaid();
-    } else {
-        window.mermaid_script = document.createElement("script");
-        mermaid_script.onload = initialize_mermaid;
-        document.head.appendChild(mermaid_script);
-        mermaid_script.defer = true;
-        mermaid_script.id = 'mermaid-script';
-        mermaid_script.src = 'https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js';
-    }
-</script>
-
-
-
-                        <a href="/jekyll-gitbook/jekyll/2023-10-14-math-latex.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MathJax and LaTeX">
+                        <a href="/jekyll-gitbook/jekyll/2022-06-26-wide_tables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Wide tables">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll-gitbook/jekyll/2023-11-11-jekyll.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Jekyll">
+                        <a href="/jekyll-gitbook/jekyll/2023-08-31-mermaid.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Diagrams with mermaid.js">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -435,11 +426,11 @@ window.MathJax = {
         "depth": 1,
         
         "next": {
-            "title": "Jekyll",
+            "title": "Diagrams with mermaid.js",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-11-11-jekyll.md",
-            "ref": "_posts/2023-11-11-jekyll.md",
+            "path": "_posts/2023-08-31-mermaid.md",
+            "ref": "_posts/2023-08-31-mermaid.md",
             "articles": []
         },
         
@@ -528,8 +519,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2023-10-15-zabbix.md",
-        "mtime": "2023-10-15 00:00:00 +0900",
+        "path": "_posts/2022-06-30-tips_warnings_dangers.md",
+        "mtime": "2022-06-30 00:00:00 +0900",
         "type": "markdown"
     },
     "gitbook": {
