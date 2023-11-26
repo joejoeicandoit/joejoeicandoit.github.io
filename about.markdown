@@ -4,15 +4,20 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+### Profile
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+- NAME : Joe Yeongjune
+- Major language：Korean and Japanese
+- Career & Activities
+  - 2023.03 ~ Now [株式会社 Trustech](https://trustech.jp/)
+  - 2023.02 ~ 2023.02 株式会社 G・O・P
+  - 2017.11 ~ 2023.01 株式会社 ゲームオン
+  - 2013.10 ~ 2017.10 コスモコンサルティング株式会社
+  - Move to in JAPAN for work
+  - I`m Korean
+- Contact
+  - Email
+    - y.jo@trutech.jp
+    - yojucho.jp@gmail.com
+  - Git : [https://github.com/joeyeongjune](https://github.com/joeyeongjune)
+  - Blog : [https://joeyeongjune.github.io/](https://joeyeongjune.github.io/)

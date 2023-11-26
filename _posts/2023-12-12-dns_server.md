@@ -7,32 +7,33 @@ category: DNS Server
 
 # Oracle Server8 에 DNS 서버를 구축/운영 해보기.
 
-## 목차
 
-[1. Installing bind package](#1.-Installing-bind-package)
-[2. named.conf settings](#2.-named.conf-settings)
-[3. named.conf validation check](#3.-named.conf-validation-check)
-[4. Add domain zone information](#4.-Add-domain-zone-information)
-[5. Create zone files and change permissions](#5.-Create-zone-files-and-change-permissions)
-[6. zone file record modification](#6.-zone-file-record-modification)
-[7. zone file settings and zone file validation check](#7.-zone-file-settings-and-zone-file-validation-check)
-[8. /etc/resolv.conf DNS 127.0.0.1 registration](#8.-/etc/resolv.conf-DNS-127.0.0.1-registration)
-[9. Named service restart and service auto-excution registration](#9.-Named-service-restart-and-service-auto-excution-registration)
-[10. Verify Registered Domain and IP](#10.-Verify-Registered-Domain-and-IP)
-[00. Issues](#00.-Issues)
+**목차**
+- [Oracle Server8 에 DNS 서버를 구축/운영 해보기.](#oracle-server8-에-dns-서버를-구축운영-해보기)
+  - [1. Installing bind package](#1-installing-bind-package)
+  - [2. named.conf settings](#2-namedconf-settings)
+  - [3. named.conf validation check](#3-namedconf-validation-check)
+  - [4. Add domain zone information](#4-add-domain-zone-information)
+  - [5. Create zone files and change permissions](#5-create-zone-files-and-change-permissions)
+  - [6. zone file record modification](#6-zone-file-record-modification)
+  - [7. zone file settings and zone file validation check](#7-zone-file-settings-and-zone-file-validation-check)
+  - [8. /etc/resolv.conf DNS 127.0.0.1 registration](#8-etcresolvconf-dns-127001-registration)
+  - [9. Named service restart and service auto-excution registration](#9-named-service-restart-and-service-auto-excution-registration)
+  - [10. Verify Registered Domain and IP](#10-verify-registered-domain-and-ip)
+  - [00. Issues](#00-issues)
 
 <br>
 <hr>
 <br>
 
-### 1. Installing bind package
+## 1. Installing bind package
 Bind 란?
 BIND는(Berkeley Internet Name Domain)의 약자로, DNS를 운용하기 위한 데몬 프로그램으로서 Unix 계열의 OS에서 사용되도록 구현된 프로그램.
 ```
 $ sudo dnf install bind bind-chroot bind-utils
 ```
 
-### 2. named.conf settings
+## 2. named.conf settings
 
 ```
 $ sudo vim /etc/named.conf
@@ -42,14 +43,14 @@ $ sudo vim /etc/named.conf
   masterfile-format text;       //Addition
 ```
 
-### 3. named.conf validation check
+## 3. named.conf validation check
 
 ```
 $ sudo named-checkconf /etc/named.conf
 ```
 If there is no output, there is no problem
 
-### 4. Add domain zone information
+## 4. Add domain zone information
 
 ```
 $ sudo vim /etc/named.rfc1912.zones
@@ -62,7 +63,7 @@ zone "tickle.com" IN {
 };
 ```
 
-### 5. Create zone files and change permissions
+## 5. Create zone files and change permissions
 
 ```
 $ sudo ls -l /var/named/named.localhost
@@ -73,7 +74,7 @@ $ sudo ls -l /var/named/tickle.oracle8.zone
   -rw-r-----. 1 root named 152 Oct  7 02:51 /var/named/tickle.com.zone
 ```
 
-### 6. zone file record modification
+## 6. zone file record modification
 
 ```
 $ sudo vim /var/named/tickle.com.zone
@@ -90,7 +91,7 @@ $TTL 1D
 www     IN A    192.168.0.200
 ```
 
-### 7. zone file settings and zone file validation check
+## 7. zone file settings and zone file validation check
 
 ```
 $ sudo named-checkconf /etc/named.rfc1912.zones
@@ -101,7 +102,7 @@ $ sudo named-checkzone tickle.com /var/named/tickle.com.zone
   OK
 ```
 
-### 8. /etc/resolv.conf DNS 127.0.0.1 registration
+## 8. /etc/resolv.conf DNS 127.0.0.1 registration
 
 ```
 $ sudo ls -l /etc/resolv.conf
@@ -127,7 +128,7 @@ $ sudo nmcli con up enp0s25
   Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/2)
 ```
 
-### 9. Named service restart and service auto-excution registration
+## 9. Named service restart and service auto-excution registration
 
 ```
 $ sudo systemctl restart named
@@ -135,7 +136,7 @@ $ sudo systemctl enable named
   Created symlink /etc/systemd/system/multi-user.target.wants/named.service → /usr/lib/systemd/system/named.service.
 ```
 
-### 10. Verify Registered Domain and IP
+## 10. Verify Registered Domain and IP
 
 ```
 $ nslookup
@@ -147,6 +148,6 @@ $ nslookup
   Address: 192.168.0.200
 ```
 
-### 00. Issues
+## 00. Issues
 
 - [resolv.conf 초기화 현상](https://it-serial.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-DNS-%EC%84%A4%EC%A0%95-%EB%B2%88%EC%99%B8%ED%8E%B8-resolvconf-%ED%8C%8C%EC%9D%BC%EC%B4%88%EA%B8%B0%ED%99%94-%ED%98%84%EC%83%81-%EC%84%A4%EB%AA%85)
