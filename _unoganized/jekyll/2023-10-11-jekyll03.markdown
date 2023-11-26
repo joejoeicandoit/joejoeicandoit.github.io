@@ -1,0 +1,48 @@
+---
+layout: post
+current: post
+cover:  assets/built/images/jekyll_githubpage.jpg
+navigation: True
+title: jekyll + GitHubPage 환경 구축(3)
+date: 2023-10-11 00:00:00 +0900
+tags: [jekyll]
+class: post-template
+subclass: 'post tag-jekyll'
+author: joeyeongjune
+---
+
+{% include jekyll-table-of-contents.html %}
+
+## 참고영상
+- [How to install and run Jekyll on Windows 10](https://youtu.be/HlfvhkDuicc?si=5W50HJ3cXqevLej9)
+- [jekyll 기반의 github 페이지 생성](https://www.youtube.com/watch?v=2ClW2LdqP30&list=PL7nkwz9MkASx1wxXK51n7KtwQyXgoNL70&index=1)
+
+### npm install
+```
+1. _includes 폴더 하위에 파일 생성 (jekyll-table-of-contents.html)
+2. assets/css/custom.css 생성
+3. gulpfile.js 수정
+4. package.json 수정
+5. node js 설치
+6. IDE(visual studio code) 재기동
+7. npm install
+8. gulp install (https://digitalidentity.co.jp/blog/creative/gulp.html#gulp-2)
+9. gulp css 설치 > 
+ -- error --
+PS C:\blogmaker> gulp css
+gulp : このシステムではスクリプトの実行が無効になっているため、ファイル C:\Users\admin\AppData\Roaming\npm\gulp.ps1 を読み込むことができません。
+詳細については、「about_Execution_Policies」(https://go.microsoft.com/fwlink/?LinkID=135170) を参照してください。
+発生場所 行:1 文字:1
++ gulp css
++ ~~~~
+    + CategoryInfo          : セキュリティ エラー: (: ) []、PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+
+```
+- powershell 을 관리자 권한으로 기동해서 폴리시를 변경후 > Set-ExecutionPolicy Unrestricted 후 실행
+- 또는 cmd를 관리자 권한으로 기동해서 실행
+- 하면 에러는 없지만, 어느쪽도 강의와 동일한 결과는 안나옴.
+- assets/built/custom.css 에 파일이 생성안되고,  [workspace] 에 별도의 css 폴더가 생성 되면서 초기 파일을 생성 시킴.
+  
+# post 목차 부분은 일단 패스

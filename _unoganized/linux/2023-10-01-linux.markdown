@@ -1,0 +1,46 @@
+---
+layout: post
+current: post
+cover:  assets/built/images/oracle_linux.png
+navigation: True
+title: Linux 초기 설정
+date: 2023-10-01 00:00:00 +0900
+tags: [linux]
+class: post-template
+subclass: 'post tag-linux'
+author: joeyeongjune
+---
+
+## Oracle Linux 8.8
+
+### 터미널에서 비프음(Beef) 안나게 하기
+```
+설정 파일을 열어, 필요한 값을 설정한다.
+# vi /etc/inputrc
+  set bell-style none
+
+터미널을 다시 로그인 한다.
+# logout
+```
+
+### 노트북 커버를 닫아도 슬립 모드로 전환 안하기
+```
+설정 파일을 열어, 필요한 값을 설정한다.
+# vi /etc/systemd/login.conf
+  HandleLidSwitch=ignore
+
+서비스 재시작한다.
+# systemctl restart systemd-logind.service
+```
+
+### SELinux 무효
+```
+$ sudo vi /etc/selinux/config
+SELINUX=disabled
+```
+
+### Firewall 무효화 (개인용 서버만만)
+```
+$ sudo systemctl stop firewalld
+$ sudo systemctl disable firewalld
+```
