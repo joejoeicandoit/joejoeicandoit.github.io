@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: posts
 title: "리그레션 테스트"
 date: 2023-11-26 00:00:00 +0900
 category: docs
+author_profile: true
+sidebar:
+    nav: "saidebar-category"
 ---
 
 # 확인/리그레션테스트

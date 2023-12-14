@@ -19,11 +19,22 @@ main:
 saidebar-category:
   - title: "Blog"
     children:
-      - title: "Jekyll"
-        url: jekyll/
-        category: "jekyll"
+      - title: "Sidebar"
+        url: sidebar/
+        category: "sidebar"
   - title: "OS"
     children:
       - title: "Linux"
         url: linux/
         category: "linux"
+  - title: "Docs"
+    children:
+      - title: "English"
+        url: english/
+        category: "english"
+      - title: "Mariadb"
+        url: mariadb/
+        category: "mariadb"
+      - title: "Docs"
+        url: docs/
+        category: "docs"

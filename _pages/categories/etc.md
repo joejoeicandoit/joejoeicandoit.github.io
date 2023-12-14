@@ -1,7 +1,11 @@
 ---
-title: "linux"
 layout: archive
-permalink: /linux
+permalink: linux
+title: "Linux"
+author_profile: true
+sidebar:
+  nav: "saidebar-category"
+
 ---
 
 {% assign posts = site.categories.linux %}

@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: posts
 title: "리눅스 커맨드"
 date: 2023-11-26 00:00:00 +0900
 category: linux
+author_profile: true
+sidebar:
+    nav: "saidebar-category"
 ---
 
 # Linux 서버 - 서버 운용시 유용한 커맨드 정리
