@@ -17,7 +17,13 @@ main:
     url: /about
 
 saidebar-category:
-  - title: "Category"
+  - title: "Blog"
     children:
-      - title: "리눅스"
-        url: "/linux"
+      - title: "Jekyll"
+        url: jekyll/
+        category: "jekyll"
+  - title: "OS"
+    children:
+      - title: "Linux"
+        url: linux/
+        category: "linux"
