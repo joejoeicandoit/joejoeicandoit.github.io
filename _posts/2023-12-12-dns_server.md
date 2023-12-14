@@ -5,9 +5,6 @@ date: 2023-11-26 00:00:00 +0900
 category: DNS Server
 ---
 
-# Oracle Server8 에 DNS 서버를 구축/운영 해보기.
-
-
 **목차**
 - [Oracle Server8 에 DNS 서버를 구축/운영 해보기.](#oracle-server8-에-dns-서버를-구축운영-해보기)
   - [1. Installing bind package](#1-installing-bind-package)
@@ -22,9 +19,9 @@ category: DNS Server
   - [10. Verify Registered Domain and IP](#10-verify-registered-domain-and-ip)
   - [00. Issues](#00-issues)
 
-<br>
 <hr>
-<br>
+
+# Oracle Server8 에 DNS 서버를 구축/운영 해보기.
 
 ## 1. Installing bind package
 Bind 란?
@@ -151,3 +148,4 @@ $ nslookup
 ## 00. Issues
 
 - [resolv.conf 초기화 현상](https://it-serial.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-DNS-%EC%84%A4%EC%A0%95-%EB%B2%88%EC%99%B8%ED%8E%B8-resolvconf-%ED%8C%8C%EC%9D%BC%EC%B4%88%EA%B8%B0%ED%99%94-%ED%98%84%EC%83%81-%EC%84%A4%EB%AA%85)
+

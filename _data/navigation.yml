@@ -15,3 +15,9 @@ main:
     url: https://joeyeongjune.github.io
   - title: "About"
     url: /about
+
+saidebar-category:
+  - title: "Category"
+    children:
+      - title: "리눅스"
+        url: "/linux"
