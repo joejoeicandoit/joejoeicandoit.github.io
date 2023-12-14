@@ -19,14 +19,9 @@ main:
 saidebar-category:
   - title: "Blog"
     children:
-      - title: "Sidebar"
-        url: sidebar/
-        category: "sidebar"
-  - title: "OS"
-    children:
-      - title: "Linux"
-        url: linux/
-        category: "linux"
+      - title: "Jekyll"
+        url: jekyll/
+        category: "jekyll"
   - title: "Docs"
     children:
       - title: "English"
@@ -35,6 +30,11 @@ saidebar-category:
       - title: "Mariadb"
         url: mariadb/
         category: "mariadb"
-      - title: "Docs"
-        url: docs/
-        category: "docs"
+      - title: "Etc"
+        url: etc/
+        category: "etc"
+  - title: "OS"
+    children:
+      - title: "Linux"
+        url: linux/
+        category: "linux"

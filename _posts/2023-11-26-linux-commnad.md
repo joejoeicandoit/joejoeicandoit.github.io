@@ -1,7 +1,8 @@
 ---
-layout: posts
 title: "리눅스 커맨드"
+author: Yeongjune Joe
 date: 2023-11-26 00:00:00 +0900
+layout: posts
 category: linux
 author_profile: true
 sidebar:

@@ -1,8 +1,14 @@
 ---
-layout: default
-title: About
-#permalink: /about/
+layout: home
+#title: "About"
+#mermaid: true
+author_profile: true
+sidebar:
+  nav: "saidebar-category"
 ---
+
+<!-- ![itsme](../assets/img/JoeYeongjun03.PNG){: width="100" height="100"}{: .center} -->
+<center><img src="../assets/img/JoeYeongjun03.PNG" width="100" height="100"></center>
 
 ### Profile
 

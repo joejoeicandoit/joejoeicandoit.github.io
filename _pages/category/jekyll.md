@@ -1,12 +1,11 @@
 ---
 layout: archive
-permalink: linux
-title: "Linux"
+permalink: jekyll
+title: "Jekyll"
 author_profile: true
 sidebar:
   nav: "saidebar-category"
-
 ---
 
-{% assign posts = site.categories.linux %}
+{% assign posts = site.categories.jekyll %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

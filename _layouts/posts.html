@@ -4,6 +4,8 @@ layout: archive
 
 {{ content }}
 
+<!-- 
+코멘트 처리를 풀면 layout 으로 posts 사용한 글은 작성글 밑으로 컨텐츠 목록들이 표시된다 (사이트 첫 화면에 보이는 목록).
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
@@ -28,3 +30,4 @@ layout: archive
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}
+-->
