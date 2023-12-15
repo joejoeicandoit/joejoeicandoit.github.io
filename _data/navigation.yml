@@ -25,7 +25,7 @@ saidebar-category:
   - title: "Docs"
     children:
       - title: "English"
-        url: english/
+        url: /english
         category: "english"
       - title: "Mariadb"
         url: /mariadb
