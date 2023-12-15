@@ -20,7 +20,7 @@ saidebar-category:
   - title: "Blog"
     children:
       - title: "Jekyll"
-        url: jekyll/
+        url: /jekyll
         category: "jekyll"
   - title: "Docs"
     children:
