@@ -21,6 +21,11 @@ sidebar:
   - 2013.10 ~ 2017.10 コスモコンサルティング株式会社
   - Move to in JAPAN for work
   - I`m Korean
+- Certificate
+  - AWS Certified Solutions Architect - Associate 
+  - LinuC Lv1, Lv2, Lv3 (304 Virtualization & High Availability)
+  - ITパスポート試験
+  - 정보처리 기술사
 - Contact
   - Email
     - y.jo@trutech.jp
