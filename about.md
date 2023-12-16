@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 #title: "About"
 #mermaid: true
 author_profile: true

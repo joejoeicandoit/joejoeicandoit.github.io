@@ -25,16 +25,16 @@ saidebar-category:
   - title: "Docs"
     children:
       - title: "English"
-        url: english/
+        url: /english
         category: "english"
       - title: "Mariadb"
-        url: mariadb/
+        url: /mariadb
         category: "mariadb"
       - title: "Etc"
-        url: etc/
+        url: /etc
         category: "etc"
   - title: "OS"
     children:
       - title: "Linux"
-        url: linux/
+        url: /linux
         category: "linux"
