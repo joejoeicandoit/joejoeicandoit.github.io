@@ -22,6 +22,11 @@ saidebar-category:
       - title: "Jekyll"
         url: /jekyll
         category: "jekyll"
+  - title: "OS"
+    children:
+      - title: "Linux"
+        url: /linux
+        category: "linux"
   - title: "Docs"
     children:
       - title: "English"
@@ -30,12 +35,8 @@ saidebar-category:
       - title: "Mariadb"
         url: /mariadb
         category: "mariadb"
-      - title: "BooksReview"
-        children:
-          url: /bookreview
-          category: "bookreview"
-  - title: "OS"
+  - title: "Books"
     children:
-      - title: "Linux"
-        url: /linux
-        category: "linux"
+      - title: "WEB3.0"
+        url: /book-review-web3.0
+        category: "bookreview"
