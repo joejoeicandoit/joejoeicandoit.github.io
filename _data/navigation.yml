@@ -30,9 +30,10 @@ saidebar-category:
       - title: "Mariadb"
         url: /mariadb
         category: "mariadb"
-      - title: "Etc"
-        url: /etc
-        category: "etc"
+      - title: "BooksReview"
+        children:
+          url: /bookreview
+          category: "bookreview"
   - title: "OS"
     children:
       - title: "Linux"
