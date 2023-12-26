@@ -38,5 +38,5 @@ saidebar-category:
   - title: "Books"
     children:
       - title: "WEB3.0"
-        url: /book-review-web3.0
+        url: /bookreview-web3
         category: "bookreview"
