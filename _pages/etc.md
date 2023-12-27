@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: etc
-title: "Etc"
+#title: "끄적끄적"
 author_profile: true
 sidebar:
   nav: "saidebar-category"

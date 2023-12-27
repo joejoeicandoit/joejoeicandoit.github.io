@@ -35,6 +35,9 @@ saidebar-category:
       - title: "Mariadb"
         url: /mariadb
         category: "mariadb"
+      - title: "끄적끄적"
+        url: /etc
+        category: "끄적끄적"
   - title: "Books"
     children:
       - title: "WEB3.0"
