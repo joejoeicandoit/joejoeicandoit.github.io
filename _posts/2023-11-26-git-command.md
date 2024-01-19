@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "깃 커맨드"
+title: "Git Command"
 date: 2023-11-26 00:00:00 +0900
 category: git
 author_profile: true
@@ -8,17 +8,14 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-# Git
-
-[Document](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC%EB%9E%80%3F)
+참조 [Documentaion(한국어)](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC%EB%9E%80%3F)
 
 
-- git 커맨드
-  - 설정 해둔 원격 저장소 확인 하기
-    - git remote
-    - git remote -v  //옵션을 사용하면 url 정보까지 표시 된다
-  - 원격 저장소 추가하기
-    - `git remote add <단축이름> <url>`
+- 설정 해둔 원격 저장소 확인 하기
+  - git remote
+  - git remote -v  //옵션을 사용하면 url 정보까지 표시 된다
+- 원격 저장소 추가하기
+  - `git remote add <단축이름> <url>`
 
 
 **SSH를 사용해서 원격 저장소 추가 하기**
