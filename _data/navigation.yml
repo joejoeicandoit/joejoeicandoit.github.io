@@ -22,7 +22,7 @@ saidebar-category:
   #    - title: "Jekyll"
   #      url: /jekyll
   #      category: "jekyll"
-  - title: "Blog"
+  - title: "Jekyll"
     url: /jekyll
     category: "jekyll"
   - title: "OS"
