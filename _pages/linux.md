@@ -1,7 +1,7 @@
 ---
+title: "Linux"
 layout: archive
 permalink: linux
-title: "Linux"
 author_profile: true
 sidebar:
   nav: "saidebar-category"

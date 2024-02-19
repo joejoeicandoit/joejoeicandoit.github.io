@@ -25,24 +25,9 @@ saidebar-category:
   - title: "Jekyll"
     url: /jekyll
     category: "jekyll"
-  - title: "OS"
-    children:
-      - title: "Linux"
-        url: /linux
-        category: "linux"
+  - title: "Linux"
+    url: /linux
+    category: "linux"
   - title: "Docs"
-    children:
-      - title: "English"
-        url: /english
-        category: "english"
-      - title: "Mariadb"
-        url: /mariadb
-        category: "mariadb"
-      - title: "끄적끄적"
-        url: /etc
-        category: "끄적끄적"
-  - title: "Books"
-    children:
-      - title: "WEB3.0"
-        url: /bookreview-web3
-        category: "bookreview"
+    url: /docs
+    category: "docs"

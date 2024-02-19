@@ -5,24 +5,19 @@ category: linux
 author_profile: true
 sidebar:
     nav: "saidebar-category"
-toc: true
-toc_sticky: true
 ---
 
-### 배경
+## 배경
 
  - Oracle Linux8을 설치 한 후, 시스템 시간을 확인 해 보니 현재 시간과 맞지 않는다.
  - `$ ntpdate ntp.nict.jp` 커맨드를 입력 해서 일본의 공개 NTP 서버로 시간 동기화를 하려고 하자 명령어를 찾지 못하는 에러가 발생
  - `$ dnf install ntp` 커맨드로 ntp를 설치 하려고 하자 패치키가 없다는 에러가 발생(?)
- 
-### 결론
-
-- RHEL8 부터 NTP의 프리 설치가 안되도록 변경이 되었다.
-- 즉, RHEL의 소스 코드로부터 컴파일한 배포판 CentOS8 및 Oracle Linux8 역시 ntp 설치 불가
-- **이제부터 시간 동기화는 `Chrony` 를 사용 하도록 변경.**
+ - 조사 결과 RHEL8 부터 NTP의 프리 설치가 안되도록 변경됨
+ - RHEL의 소스 코드로부터 컴파일한 배포판 CentOS8 및 Oracle Linux8 역시 ntp 설치 불가
+ - **시간 동기화는 `Chrony` 를 사용 하도록 변경됨.**
 
 
-### 사용 방법
+## 사용 방법
 
 ##### 1. 먼저 chrony 의 버전을 확인
 

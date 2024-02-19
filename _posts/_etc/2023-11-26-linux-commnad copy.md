@@ -1,7 +1,7 @@
 ---
-title: 리눅스 커맨드
+title: "Linux 커맨드"
 date: 2023-11-26 00:00:00 +0900
-category: linux
+category: 
 author_profile: true
 sidebar:
     nav: "saidebar-category"
@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-**Linux Server 에서 자주 사용하는 커맨드 정리!!**
+**내가 Linux Server를 사용하면서   사용하는 커맨드 정리!!**
 
 #### uname
 
