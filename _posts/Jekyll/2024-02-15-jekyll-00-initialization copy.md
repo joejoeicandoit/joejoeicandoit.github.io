@@ -9,12 +9,12 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-# 환경구축에 대해
+## 로컬 환경 구축하기
 
-- 로컬 개발환경으로 OS는 `Oracle Linux server` 를 사용했다
-- 이유는 linux의 공부 목적도 있었지만, Windows에서 구축할때 에러가 너무 많이 발생해서
-- 뭔가 제대로 해보기도 전에 지쳐서 포기 할껏만 같았기 때문이다.
-- 언제가 될진 모르겠지만 Windows편은 내용 정리가 되면 업로드를 할 예정이다.
+- 로컬 개발환경의 OS는 `Oracle Linux server` 를 사용했습니다.
+- 이유는 Linux의 공부 목적도 있었지만, Windows에서 구축할 때 에러가 많이 발생하다 보니,
+- 제대로 해보기도 전에 지쳐서 포기 할껏만 같았기 때문입니다.
+
 
 ## 1. Git
 
@@ -110,16 +110,22 @@ $ jekyll new ~/myblog
 
 ## 이동
 $ cd ~/myblog
+```
 
-## 사이트를 빌드하고 로컬 서버에 적용
-$ bundle exec jekyll serve --host=<oraclelinux IP>
+## 8. Start
 
-브라우저를 열고 `http//<oraclelinux IP>:4000` 으로 접속 한다.
-
-## 만약, 구축한 서버와 브라우저가 같은 PC일 경우라면, `--host` 옵션을 안넣어도 괜찮다.
+```
+## 사이트 기동
 $ bundle exec jekyll serve
 
-브라우저를 열고 `http//localhost:4000` 으로 접속.
+## 브라우저를 열고 `http//localhost:4000` 으로 접속하면 jekyll 로 구현한 정적 웹 사이트가 보여질것이다.
+## 만약, 사이트를 구축한 Linux 서버와 접속 하는 브라우저가 서로 다른 PC라면, <localhost:4000> 으로 접속이 안되기에,
+## 아래의 방법으로 사이트를 기동 시키고 접속 하면된다.
+
+$ bundle exec jekyll serve --host=<linux server IP>
+
+## 브라우저를 열고 `http//<linux server IP>:4000` 으로 접속.
+## 혹시, 4000포트를 변경 하고 싶다면 `--port=<port number>` 옵션도 추가해주면 된다.
 ```
 
 -----

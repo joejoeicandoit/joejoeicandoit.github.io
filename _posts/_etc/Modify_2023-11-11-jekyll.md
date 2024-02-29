@@ -1,8 +1,8 @@
 ---
-title: "[Jekyll] Jekyll을 이용한 Github page 블로그 구축" 
-date: 2023-11-11 00:00:00 +0900
+title: "Jekyll을 이용한 Github page 블로그 구축(Windows편)" 
+date: 2024-11-11 00:00:00 +0900
 layout: posts
-category: jekyll
+category: 
 mermaid: true
 author_profile: true
 sidebar:
