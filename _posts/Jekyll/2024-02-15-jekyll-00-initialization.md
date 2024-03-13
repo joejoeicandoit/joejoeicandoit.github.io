@@ -9,11 +9,11 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-## 로컬 환경 구축하기
+## 환경
 
-- 로컬 개발환경의 OS는 `Oracle Linux server` 를 사용했습니다.
-- 이유는 Linux의 공부 목적도 있었지만, Windows에서 구축할 때 에러가 많이 발생하다 보니,
-- 제대로 해보기도 전에 지쳐서 포기 할껏만 같았기 때문입니다.
+- 빈번히 발생하는 Windows 환경의 에러문제로 인해, 개발환경의 OS는 `Oracle Linux server` 를 사용했습니다.
+- Jekyll 사용을 위해서 ruby 언어의 설치가 필요합니다. ruby 의 버전별 관리를 간편히 하기 위해 `rbenv` 를 사용 했습니다.
+
 
 
 ## 1. Git
