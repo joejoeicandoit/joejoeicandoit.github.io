@@ -1,11 +1,4 @@
----
-title: Linux Time Setup
-date: 2024-02-05 00:00:00 +0900
-category: linux
-author_profile: true
-sidebar:
-    nav: "saidebar-category"
----
+
 
 ## 배경
 

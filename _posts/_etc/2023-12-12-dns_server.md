@@ -1,12 +1,4 @@
----
-layout: posts
-title: "DNS Server 구축/운영 해보기"
-date: 2023-11-26 00:00:00 +0900
-category: DNS Server
-author_profile: true
-sidebar:
-    nav: "saidebar-category"
----
+
 
 **목차**
 - [Oracle Server8 에 DNS 서버를 구축/운영 해보기.](#oracle-server8-에-dns-서버를-구축운영-해보기)

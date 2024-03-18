@@ -1,13 +1,4 @@
----
-title: Linux Server 초기설정
-date: 2023-10-01 00:00:00 +0900
-category: linux
-author_profile: true
-sidebar:
-    nav: "saidebar-category"
-toc: true
-toc_sticky: true
----
+
 
 **Linux Server 를 설치한후 반드시 하는 설정!!**
 

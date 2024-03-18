@@ -1,13 +1,4 @@
----
-title: "Jekyll을 이용한 Github page 블로그 구축(Windows편)" 
-date: 2024-11-11 00:00:00 +0900
-layout: posts
-category: 
-mermaid: true
-author_profile: true
-sidebar:
-    nav: "saidebar-category"
----
+
 
 # Jekyll+GithubPage 를 이용한 블로그 구축
 
