@@ -1,7 +1,7 @@
 ---
+layout: posts
 title: "Jekyll을 이용한 GitHub page 블로그 작성(1)" 
 date: 2024-02-15 00:00:00 +0900
-layout: posts
 category: jekyll
 mermaid: true
 author_profile: true
@@ -9,14 +9,15 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-## 환경
+## 환경 구축 하기
 
-- 빈번히 발생하는 Windows 환경의 에러문제로 인해, 개발환경의 OS는 `Oracle Linux server` 를 사용했습니다.
-- Jekyll 사용을 위해서 ruby 언어의 설치가 필요합니다. ruby 의 버전별 관리를 간편히 하기 위해 `rbenv` 를 사용 했습니다.
+- 빈번히 발생하는 Windows 환경의 에러문제로 인해, 개발환경의 OS는 `Oracle Linux server` 를 사용.
+- Jekyll 사용을 위해 ruby 언어 설치.
+- ruby 의 버전별 관리를 간편히 하기 위해 `rbenv` 를 사용.
 
 
 
-## 1. Git
+### 1. Git
 
 ```
 ## git 설치
@@ -26,7 +27,7 @@ $ sudo yum -y install git
 $ git --version
 ```
 
-## 2. rbenv
+### 2. rbenv
 
 ```
 ## rbenv 설치
@@ -36,7 +37,7 @@ $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 ls -d ~/.rbenv
 ```
 
-## 3. ruby-build
+### 3. ruby-build
 
 ```
 ## ruby-build 설치
@@ -46,7 +47,7 @@ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-
 $ ls -d ~/.rbenv/plugins/ruby-build
 ```
 
-## 4. .bash_profile
+### 4. .bash_profile
 
 ```
 ## 설정
@@ -61,7 +62,7 @@ $ cat ~/.bash_profile
 $ exec $SHELL --login
 ```
 
-## 5. packge
+### 5. packge
 
 ```
 ## ruby 설치에 필요한 패키지 설치
@@ -75,7 +76,7 @@ $ yum list installed | grep readline-devel
 $ yum list installed | grep zlib-devel
 ```
 
-## 6. ruby
+### 6. ruby
 
 ```
 ## rbenv 버전 확인
@@ -99,7 +100,7 @@ $ rbenv global <version>
 $ ruby -v
 ```
 
-## 7. jekyll
+### 7. jekyll
 
 ```
 ## jekyll and bundler 설치
@@ -112,7 +113,7 @@ $ jekyll new ~/myblog
 $ cd ~/myblog
 ```
 
-## 8. Start
+### 8. Start
 
 ```
 ## 사이트 기동

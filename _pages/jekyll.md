@@ -1,6 +1,6 @@
 ---
-title: "Jekyll"
 layout: archive
+title: "Jekyll"
 permalink: jekyll
 author_profile: true
 sidebar:
