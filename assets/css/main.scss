@@ -7,7 +7,9 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// 웹 폰트 [오뮤 다예쁨체](https://noonnu.cc/font_page/1136)
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+// [오뮤 다예쁨체](https://noonnu.cc/font_page/1136)
 // @font-face {
 //     font-family: 'omyu_pretty';
 //     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
@@ -15,9 +17,10 @@
 //     font-style: normal;
 // }
 
+// [스위트](https://noonnu.cc/font_page/1150)
 @font-face {
-    font-family: 'GrandifloraOne-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/GrandifloraOne-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
