@@ -1,3 +1,26 @@
+---
+layout: posts
+title: "Ubuntu apt-get 명령어 정리" 
+date: 2024-03-26 11:00:00 +0900
+category: OS
+mermaid: true
+author_profile: true
+sidebar:
+    nav: "saidebar-category"
+---
+
+## 발단
+
+linux 공부 해보겠다고 중고로 구입한 hp 노트북에 Ubuntu만이 제대로 설치가 안되는 경우가 있었다.  
+발생 타이밍은 OS 설치후 시스템 재시작 했을때 
+※Rocky linux 나 Oracle linux 의 경우 설치와 동작에 문제 없음.  
+
+
+
+
+
+
+
 BootDevice Not Found
 
 Plase install on operating system on your hard disk.

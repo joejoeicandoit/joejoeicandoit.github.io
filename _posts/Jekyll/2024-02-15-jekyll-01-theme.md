@@ -9,7 +9,7 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-## 테마 적용 하기
+## Minimal-Mistaje 테마 적용
 
 - 내용 정리중
 

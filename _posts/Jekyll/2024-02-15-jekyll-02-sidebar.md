@@ -11,7 +11,7 @@ sidebar:
 
 ## Minimal mistake theme 에 사이드바 구현하기
 
-### 조건
+**전제**
 
 - minimal mistakes theme 를 적용한 jekyll 환경.
 

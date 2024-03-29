@@ -46,5 +46,3 @@ sidebar:
 - Contact
   - Email
     - y.jo@trutech.jp
-  - Git : [https://github.com/joeyeongjune](https://github.com/joeyeongjune)
-  - Blog : [https://joeyeongjune.github.io/](https://joeyeongjune.github.io/)

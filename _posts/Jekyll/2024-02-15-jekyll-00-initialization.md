@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Jekyll을 이용한 GitHub page 블로그 작성(1)" 
+title: "Jekyll 개발 환경 만들기(1)" 
 date: 2024-02-15 00:00:00 +0900
 category: jekyll
 mermaid: true
@@ -9,11 +9,12 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-## 환경 구축 하기
+## 
 
-- 빈번히 발생하는 Windows 환경의 에러문제로 인해, 개발환경의 OS는 `Oracle Linux server` 를 사용.
+- OS로는 `Ubuntu 22.05` 를 사용 해서 확인.
+  - `Oracle Linux server` 에서도 jekyll 설치및 구동 까지는 확인 완료.
 - Jekyll 사용을 위해 ruby 언어 설치.
-- ruby 의 버전별 관리를 간편히 하기 위해 `rbenv` 를 사용.
+- ruby의 버전별 관리를 위해 `rbenv` 를 사용.
 
 
 
@@ -21,10 +22,13 @@ sidebar:
 
 ```
 ## git 설치
-$ sudo yum -y install git
+$ sudo yum install git
 
 ## 확인
 $ git --version
+
+## Ubuntu의 경우 OS 설치 하면 git이 기본으로 설치 되어 있을수가 있다. 만약 설치 되어 있지 않다면 설치 해주자.
+$ sudo apt-get install git
 ```
 
 ### 2. rbenv
@@ -65,6 +69,7 @@ $ exec $SHELL --login
 ### 5. packge
 
 ```
+[Oracle Linux]
 ## ruby 설치에 필요한 패키지 설치
 $ sudo yum -y install bzip2 gcc openssl-devel readline-devel zlib-devel
 
@@ -74,6 +79,17 @@ $ gcc --version
 $ yum list installed | grep openssl-devel
 $ yum list installed | grep readline-devel
 $ yum list installed | grep zlib-devel
+
+
+[Ubuntu]
+## ruby 설치에 필요한 패키지 설치
+$ sudo apt-get install build-essential libssl-dev zlib1g-dev libyaml-dev
+
+## 확인
+$ sudo apt list --installed | grep build-essential
+$ sudo apt list --installed | grep libssl-dev
+$ sudo apt list --installed | grep zlib1g-dev
+$ sudo apt list --installed | grep libyaml-dev
 ```
 
 ### 6. ruby
@@ -113,7 +129,7 @@ $ jekyll new ~/myblog
 $ cd ~/myblog
 ```
 
-### 8. Start
+### 8. jekyll server Start
 
 ```
 ## 사이트 기동
@@ -126,7 +142,7 @@ $ bundle exec jekyll serve
 $ bundle exec jekyll serve --host=<linux server IP>
 
 ## 브라우저를 열고 `http//<linux server IP>:4000` 으로 접속.
-## 혹시, 4000포트를 변경 하고 싶다면 `--port=<port number>` 옵션도 추가해주면 된다.
+## 4000포트를 변경 하고 싶다면 `--port=<port number>` 옵션 추가.
 ```
 
 -----
@@ -134,3 +150,8 @@ $ bundle exec jekyll serve --host=<linux server IP>
 ## 참고
 
 - [jekyll DOCS:빠른시작](https://jekyllrb-ko.github.io/docs/)
+- [우분투에서의 Jekyll](https://jekyllrb-ko.github.io/docs/installation/ubuntu/)
+- [Ruby 3.3.0のインストールエラー](https://book-reviews.blog/ruby-3.3.0-install-error/)
+  - Ruby3.2.0 이후로는 libyaml 이 필수
+  - Ubuntu 는 libyaml 대신, libyaml-dev 를 설치 하도록 포스트 수정
+  - [Ubuntu unable to locate package libyaml](https://stackoverflow.com/questions/77082389/ubuntu-unable-to-locate-package-libyaml)
