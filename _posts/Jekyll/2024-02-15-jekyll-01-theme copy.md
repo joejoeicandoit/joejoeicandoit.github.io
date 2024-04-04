@@ -89,3 +89,14 @@ Powershell> ssh-keygen
 3. passphrase 재차 입력
 ```
 
+
+
+## 11. ssh_config
+
+$ sudo vi  /etc/ssh/ssh_config
+
+패스워드로 로그인 금지
+PasswordAuthentication no
+
+root 로그인 금지
+PermitRootLogin no

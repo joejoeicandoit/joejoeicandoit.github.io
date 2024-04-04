@@ -17,10 +17,12 @@ main:
     url: /about
 
 saidebar-category:
-  - title: "Jekyll"
-    url: /jekyll
+  - title: "Review"
+    url: /review
   - title: "Git"
     url: /git
+  - title: "Jekyll"
+    url: /jekyll
   #- title: "Blog"
   #  children:
   #    - title: "Jekyll"
