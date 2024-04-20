@@ -7,9 +7,6 @@ sidebar:
   nav: "saidebar-category"
 ---
 
-<!-- ![itsme](../assets/img/JoeYeongjun03.PNG){: width="100" height="100"}{: .center} -->
-<center><img src="../assets/img/JoeYeongjun03.PNG" width="100" height="100"></center>
-
 ### ご挨拶
 
 お疲れ様です。  
@@ -40,9 +37,9 @@ sidebar:
   - AWS Certified Solutions Architect - Associate
   - LinuC Lv1, Lv2, Lv3 (304 Virtualization & High Availability)
   - ITパスポート試験
-  - 情報処理産業技師 (日本のFEと相互認証)
-    - 日本：基本情報技術者試験(Fundamental Information Technology Engineer Examination)
-    - 韓国：정보처리산업기사(情報処理 産業技師:Industrial Engineer)
+  - 정보처리산업기사 (日本のFEと相互認証)
+    - 韓国：정보처리산업기사(情報処理産業技師:Industrial Engineer)
+    - 日本：基本情報技術者試験(FE：Fundamental Information Technology Engineer Examination)
 - Contact
   - Email
     - y.jo@trutech.jp
