@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "Ubuntu apt-get 명령어 정리" 
-date: 2024-03-26 11:00:00 +0900
+title: "[Ubunt] hp 중고 노트북에서 부팅이 안되던 문제 해결" 
+date: 2024-05-15 02:48:00 +0900
 category: OS
 mermaid: true
 author_profile: true
@@ -9,17 +9,14 @@ sidebar:
     nav: "saidebar-category"
 ---
 
-## 발단
+## 배경
 
-linux 공부 해보겠다고 중고로 구입한 hp 노트북에 Ubuntu만이 제대로 설치가 안되는 경우가 있었다.  
-발생 타이밍은 OS 설치후 시스템 재시작 했을때 
-※Rocky linux 나 Oracle linux 의 경우 설치와 동작에 문제 없음.  
-
+linux 공부 해보겠다고 중고로 구입한 노트북(hp EliteBook) 이, Rocky linux 나 Oracle linux 는 문제가 없는데,  
+Ubuntu Serve 만이 설치를 해도 제대로 부팅이 안되는 현상이 있었다.  
 
 
-
-
-
+```
+--- Ubuntu 설치 후 부팅시 보여지던 메세지 ---
 
 BootDevice Not Found
 
@@ -30,10 +27,14 @@ Hard Disk - (3F0)
 F2 System Diagnostics
 
 For more information, please visit: www.hp.com\go\techcenter\startup
+``
+
+트러블 슈팅을 하다 하다 결국 포기 하기로 마음 먹고, Ubuntu 를 안쓰기로 결정 했는데,  
+웬지 기분이 깔끔 하지 못해, 결국 Chat GPT에게도 물어 보고, 하루 날 잡아서 해외 사이트도 이러 저리 파 보았다.  
 
 
-
---- From chat GPT
+```
+--- Chat GPT 가 알려줘던 답변 ---
 
 이러한 오류는 주로 하드 디스크가 올바르게 감지되지 않거나 부팅 가능한 운영 체제가 설치되지 않았음을 나타냅니다. 이 문제를 해결하기 위해 다음 단계를 시도할 수 있습니다.
 
@@ -48,25 +49,24 @@ BIOS 설정 확인: 먼저 컴퓨터를 재부팅하고 BIOS 설정으로 들어
 하드 디스크 장애 확인: 하드 디스크의 물리적 또는 논리적인 장애가 있는지 확인할 수 있는 도구를 사용합니다. 예를 들어, Ubuntu Live CD나 USB를 사용하여 시스템을 부팅하고 디스크 유틸리티를 실행하여 하드 디스크의 상태를 확인할 수 있습니다.
 
 재설치: 위의 단계들을 시도한 후에도 문제가 해결되지 않는다면, 하드 디스크에 문제가 있을 수 있으므로 새로운 하드 디스크로 교체하거나 운영 체제를 재설치하는 것이 좋습니다.
+```
 
+일단 다른 OS는 문제가 없었기에 GPT의 답변은 무시를 했다.  
+그리고, 한 해외 유저가 남긴 "Ubuntu OS가 UEFI 파일 시스템에서 제대로 동작 하지 않는 경험을 했다" 는 코멘트를 발견하고 나서,  
+아래와 같이 재 설치를 진행 했고, 문제 없이 부팅 되는것을 확인 했다.  
 
+```
+--- 재설치 진행 순서 ---
 
-###########
+- 1. 설치 디스크 작성
+  - rufus 툴을 사용해, USB에 Ubuntu의 설치 디스크를 작성
+  - 파티션 구성은 GPT
+  - 타켓 시스템 UEFI(CSM なし)
 
-기동 USB
-> rufus 툴을 사용
-> 파티션 구성 GPT
-> 타켓 시스템 UEFI(CSM なし)
+- 2. 노트북 BIOS 설정
+  - BIOS 셋업
+  - 레거시 BIOS 를 UFEI(CSM なし) 로 변경
 
-노트북
-> BIOS 셋업
-> 레거시 BIOS ⇒ UFEI(CSM なし)　변경
-
-USB로 기동
-> 파티션 설정
-
-설치 완료 후, Ubuntu 로그인 성공!!
-
-
-
-/lib/systemd/system
+- 3. Ubuntu 설치
+  - 부팅 순서가 하드 디스크를 먼저 읽는 경우에는 BIOS에서 USB변경
+  - 사용자 입맛에 맞게 설정 진행 ※잘 모르면 대부분 디폴트 설정으로 진행

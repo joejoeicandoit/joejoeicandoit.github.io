@@ -44,8 +44,6 @@ apt-get update
 # Upgrading installed packages
 apt upgrade
 apt-get upgrade
-
-
 ```
 
 

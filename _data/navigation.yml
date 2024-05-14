@@ -23,6 +23,8 @@ saidebar-category:
     url: /git
   - title: "Jekyll"
     url: /jekyll
+  - title: "OS"
+    url: /os
   #- title: "Blog"
   #  children:
   #    - title: "Jekyll"
