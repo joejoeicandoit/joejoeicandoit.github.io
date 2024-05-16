@@ -2,7 +2,7 @@
 layout: posts
 title: "[Ubunt] hp 중고 노트북에서 부팅이 안되던 문제 해결" 
 date: 2024-05-15 02:48:00 +0900
-category: OS
+category: os
 mermaid: true
 author_profile: true
 sidebar:

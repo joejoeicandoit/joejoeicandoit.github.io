@@ -2,7 +2,7 @@
 layout: posts
 title: "[Ubuntu] apt 와 apt-get 의 차이" 
 date: 2024-05-15 11:20:00 +0900
-category: OS
+category: os
 mermaid: true
 author_profile: true
 sidebar:
