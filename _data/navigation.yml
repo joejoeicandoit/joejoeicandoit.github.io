@@ -15,11 +15,12 @@ main:
   - title: "About Me"
     url: /about
 
-sidebar-category:
-  - title: "Review"
-    url: /review
+saidebar-category:
   - title: "Git"
     url: /git
+  - title: "Review"
+    url: /review
+
   - title: "Jekyll"
     url: /jekyll
   - title: "OS"
