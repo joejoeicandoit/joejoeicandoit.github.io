@@ -25,8 +25,8 @@ saidebar-category:
     url: /jekyll
   - title: "OS"
     url: /os
-  #- title: "Blog"
-  #  children:
+  - title: "English"
+    url: /english
   #    - title: "Jekyll"
   #      url: /jekyll
   #      category: "jekyll"
