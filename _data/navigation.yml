@@ -10,13 +10,12 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-
   - title: "HOME"
     url: https://joeyeongjune.github.io
   - title: "About Me"
     url: /about
 
-saidebar-category:
+sidebar-category:
   - title: "Review"
     url: /review
   - title: "Git"
@@ -27,12 +26,3 @@ saidebar-category:
     url: /os
   - title: "English"
     url: /english
-  #    - title: "Jekyll"
-  #      url: /jekyll
-  #      category: "jekyll"
-  #- title: "Linux"
-  #  url: /linux
-  #  category: "linux"
-  #- title: "Docs"
-  #  url: /docs
-  #  category: "docs"
