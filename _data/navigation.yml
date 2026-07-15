@@ -20,7 +20,6 @@ saidebar-category:
     url: /git
   - title: "Review"
     url: /review
-
   - title: "Jekyll"
     url: /jekyll
   - title: "OS"
